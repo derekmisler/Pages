@@ -1,0 +1,42 @@
+<script type='text/javascript'> 
+function validate2()
+{
+var isValid = true;
+var isNewsletterSelected = true;
+var errorString = '';
+var x = document.OptinForm2;
+if (x.UEmail.value== "")
+{ 
+errorString = errorString + "Email Address. \n ";
+isValid = false;
+}
+else {
+if (x.UEmail.value.indexOf("@") == -1 || x.UEmail.value.indexOf(".") == -1)
+{
+errorString = errorString + 'Invalid email address.';
+isValid = false;
+}
+}
+
+if (isValid == true && isNewsletterSelected == true)
+{ 
+x.submit.disabled = true;
+return true;  
+} 
+else 
+{ 
+if (isNewsletterSelected == false)
+{
+errorString = errorString +"----------------------\nPlease select at least one subscription";  
+}
+alert("Following fields are required:\n\n"+ errorString);  return false; }  
+}
+</script>
+<form id='Optin2' name='OptinForm2' method='post' action='http://click.oo155.com/OptIn.aspx?OptinFormID=2&26241823=169' onsubmit='return validate2();'>
+<input type='hidden' name='OptinFormID' value='2' />
+<input type='hidden' name='26241823' value='169' />
+<p>Enter your email address below to receive the Asheville newsletter.</p>
+<p>email<br />
+<input type='text' name='UEmail'/></p>
+<p><input type='submit' name='submit' value='Submit'/></p>
+</form>

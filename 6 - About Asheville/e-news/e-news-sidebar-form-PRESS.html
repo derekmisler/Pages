@@ -1,0 +1,73 @@
+<script type="text/javascript" language="javascript">
+String.prototype.trim = function() {
+     return this.replace(/^\s+|\s+$/g, "");
+};
+
+function validate5()
+{
+	var isValid = true;
+	var errorString = "";
+	var x = document.OptinForm5;
+	if (x.UEmail.value.trim() == "")
+	{
+		errorString = errorString + "Email Address\n ";
+		isValid = false;
+	}
+	else
+	{
+		if (x.UEmail.value.indexOf("@") == -1 || x.UEmail.value.indexOf(".") == -1)
+		{
+			errorString = errorString + " Valid Email Address\n";
+			isValid = false;
+		}
+	}
+	if (x.field7.value.trim() == "")
+	{
+		errorString = errorString + "Media Outlet\n" ;
+		isValid = false;
+	}
+	if (x.field11.value.trim() == "")
+	{
+		errorString = errorString + "Phone Number\n" ;
+		isValid = false;
+	}
+	if (x.field13.value.trim() == "")
+	{
+		errorString = errorString + "FirstName\n" ;
+		isValid = false;
+	}
+
+	if (isValid == true)
+	{
+		document.getElementById("Optin5").style.display = "none";
+		document.getElementById("thank-you").style.display = "block";
+		return true;
+	}
+	else
+	{
+		alert("Following fields are required:\n\n"+ errorString);
+		return false;
+	}  
+}
+</script>
+ 
+<form id="Optin5" name="OptinForm5" method="post" action="http://click.bsftransmit7.com/OptIn.aspx?OptinFormID=5&26241823=169" onsubmit="return validate5();">
+	<input type="hidden" name="OptinFormID" value="5" />
+	<input type="hidden" name="26241823" value="169" />
+	<div class="list-wrap">
+	<b class="bigger-strong">Sign up for news releases</b>
+		<h6>Name</h6>
+		<input type="text" class="firstname" name="field13" />
+		<h6>Email</h6>
+        <input type="text" class="emailaddress" name="UEmail" />
+		<h6>Media Outlet</h6>
+		<input type="text" class="outlet" name="field7" />
+		<h6>Phone Number</h6>
+		<input type="text" class="phonenumber" name="field11" />
+        <input class="small button expand" value="Sign Up!" name="submit" type="submit" onMouseDown="_gaq.push(['pageTracker._trackEvent', 'Sidebar', 'eNews Signup Widget', 'Activity Interest: Food']);" />
+    </div>
+</form>
+<div class="list-wrap" style="display: none" id="thank-you">
+    <h3>Thanks!</h3>
+</div>
+<br class="clear" />

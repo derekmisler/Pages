@@ -1,0 +1,303 @@
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.exploreasheville.com/30days/tooltip.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function () {
+	$("#maincontent div.slide").each (function() {
+		$(this).css("height", $(this).height());
+	});
+	$('#maincontent div.slide:not(:first)').slideUp(); 
+	$('#maincontent h3:first').addClass('open'); 
+	$('h3.toggle').click(function () {
+			$('#maincontent div.slide:visible').slideUp();
+			$('#maincontent H3.open').removeClass('open');
+			$(this).next().slideDown();
+			$(this).addClass('open');
+  	});
+});
+</script>
+<style>
+	#maincontent{
+		margin-right:10px;
+	}
+	#maincontent, #maincontent p {
+		font-size:12px;
+		line-height:18px;
+		font-family:Arial, sans-serif;
+		text-rendering:optimizeLegibility;
+		-webkit-font-smoothing:antialiased;
+	}
+	#maincontent h2{
+		font-size:20px;
+		font-weight:bold;
+		color:#981e32;
+		padding:0;
+		margin:0 0 0px 0;
+		height:18px;
+		background-color:#ffffff;
+		text-shadow:1px 1px 1px rgba(0,0,0,.05);
+		box-shadow:inset 0 0 15px rgba(0,0,0,.2);
+		width: auto;  
+		height:auto;
+		display:block;
+		padding: 10px 16px;
+		border: 0;  
+		font-size: 16px;  
+		line-height:16px;
+		border-radius:8px 8px 0 0 !important;
+		color: #FFFFFF !important;  
+	}
+	#maincontent h2:first-of-type{
+		background: #b83248; /* Old browsers */
+	}
+	#maincontent h2:last-of-type{
+		background: #766a65; /* Old browsers */
+		margin:10px 0 0 0;
+	}
+	#maincontent h3{
+		width: auto;  
+		height:auto;
+		display:block;
+		padding: 10px 16px;
+		margin:0;
+		border: 0;  
+		font-size: 16px;  
+		line-height:16px;
+		border-radius:0px;
+		color: #165788 !important;  
+		background: #f9f9f9;
+		border-bottom:1px solid #ffffff;
+		box-shadow:inset 0 0 15px rgba(0,0,0,.1);
+	}
+	#maincontent h3:hover{
+		cursor:pointer;  
+		color: #ffffff !important;  
+		text-shadow:1px 1px 0px #194363;
+		background-color:#165788;
+	}
+	#maincontent h3:active{
+	background: #194363;
+	cursor:pointer;  
+	color: #eeaf30 !important;
+	text-shadow:-1px -1px 0 #000000; !important;
+	box-shadow:inset 0 0 15px rgba(0,0,0,.2);
+	}
+	#maincontent p{
+		margin:5px 15px 6px 20px;
+		font-size:14px;
+		line-height:22px;
+	}
+	#maincontent img{
+		display:block;
+		float:right;
+		margin:0 0 0 10px;
+	}
+	#maincontent a, #maincontent a:visited{
+		color:#165788;
+		text-decoration:none;
+	}
+	#maincontent a:hover{
+		color:#165788;
+		text-decoration:underline;
+	}
+	#maincontent a:active{
+		background-color:#165788;
+		text-decoration:none;
+		color:#ffffff;
+	}
+	#maincontent .numbers{
+		display:inline-block;
+		margin:0 4px 0 0;
+		padding:0;
+		width:20px;
+		font-size:10px;
+		color:#766a65;
+		text-align:right;
+	}
+	#maincontent span{
+		display:block;
+		background-color:#ffffff;
+	}
+	#maincontent div.slide{
+		background: #f9f9f9;
+		padding:10px 10px 10px 0;
+	}
+	#maincontent ul h4, #maincontent ol h4, #maincontent h4{
+		display:block;
+		color:#981e32;
+		font-weight:bold;
+		font-style:normal;
+		text-shadow:1px 1px 0px rgba(255,255,255,.35);
+		font-size:18px;
+		margin:0;
+		padding:0 0 0 20px;
+	}
+	#maincontent ul, #maincontent ol{
+		display:block;
+		margin:0;
+		padding:0px;
+	}
+	#maincontent ul p, #maincontent ol p{
+		font-size:14px;
+		font-weight:bold;
+		color:#90986b;
+		display:block;
+		padding:0 0 0px 0;
+	}
+	#maincontent ul li, #maincontent ol li{
+		display:block;
+		margin:3px 0 0px 20px;
+		padding:4px 6px 3px 10px;
+		font-weight:bold;
+		font-size:12px;
+		color:#766a65;
+		border-left:1px solid #766a65;
+	}
+	.number{
+		font-size:18px;
+		font-weight:bold;
+		color:#766a65;
+		display:inline !important;
+		margin:0 5px 0 0;
+		padding:0;
+		background:none !important;
+		text-shadow:1px 1px 1px rgba(0,0,0,.1);
+	}
+	strong{
+		color:#766a65 !important;
+		font-weight:normal;
+	}
+	#descript{
+		display:block;
+		margin:0;
+		padding:0;
+		width:534px;
+	}
+</style>
+<div id="maincontent">
+	<h2>Past Promotions</h2>
+	<span class="contest">
+		<h3 class="toggle">The Grove Park Great Gatsby Giveaway</h3>
+		<div class="slide">
+			<div>
+				<p>Take a trip back in time to an era complete with speakeasies, flappers and that one golden girl that got away. That's the story of F. Scott Fitzgerald's classic novel The Great Gatsby.  A former guest at the famed Grove Park Inn resort &amp; Spa, Fitzgerald spent much of his time in Asheville where his beloved Zelda was being treated at a nearby hospital.</p>
+				<p>In honor of the celebrated American novelist, the Grove Park is hosting a weekend of events surrounding Fitzgerald's birthday. Enjoy guided tours of Fitzgerald's room, fortune tellers, a cooking demonstration, chair massages, guided history tours and live vintage music throughout the resort. The event is slated for September 23-25, 2011.</p>
+				<ul>
+					<p>Now you can join in on the tribute and win an exciting gift pack from the Grove Park. Enter now and win the following prize pack.</p>
+					<li>A copy of The Great Gatsby</li>
+					<li>A Grove Park Inn history book</li>
+					<li>2 tickets for the Grove Park Inn history tour</li>
+					<li>Plus: a couple of surprises thrown in for fun.</li>
+				</ul>
+				<p><a title="Enter Daily" href="http://www.exploreasheville.com/contests/enter-daily/index.aspx">Enter here.</a></p>
+			</div>
+		</div>
+		<h3 class="toggle">Asheville's Calling</h3>
+		<div class="slide">
+			<div>
+				<h4>Answer the Call &amp; Win a Droid!</h4>
+				<p>Could your cell phone be a little smarter? Now's your chance to upgrade your mobile device with our Asheville's Calling Droid giveaway! We're giving away a free HTC myTouch 3G Unlocked Android phone to one lucky winner who answers the call!</p>
+				<p><a title="Enter Daily" href="http://www.exploreasheville.com/ashevilles-calling/download-ringtone/index.aspx?utm_campaign=fall">Enter here.</a></p>
+			</div>
+		</div>
+		<h3 class="toggle">Win Tickets to...</h3>
+		<div class="slide">
+			<h4 class="">The Craft Fair of the Southern Highlands</h4>
+			<div class="">
+				<p>Handmade craft is still alive and well in the Appalachian mountains. You can see for yourself at the <a href="http://www.exploreasheville.com/event-calendar/event-details/index.aspx?eid=5939" title="Southern Craft Fair event information">Craft Fair of the Southern Highlands</a> where over 200 craftspeople will be present selling their works of clay, fiber, glass, leather, metal, mixed media, natural materials, paper, wood and jewelry. It all takes place at the Asheville Civic Center this week, from July 21&#8211;24.</p>
+				<ul><h4>Winner</h4>
+					<li>Congratulations to <strong>Peggy W.</strong> who won our tickets to the Craft Fair of the Southern Highlands!</li>
+				</ul>
+			</div>
+		</div>
+	</span>
+	<span class="contest">
+		<h3 class="toggle">Moby at Moogfest! Win Tickets Here</h3>
+		<div class="slide">
+			<h4 class="">Up for Grabs: Two weekend passes to Asheville's fall music festival</h4>
+			<div class="">
+				<img src="http://www.exploreasheville.com/Images/emails/moogfest/moby.jpg" title="Moby" align="right" />
+				<p>Big news for electronic music fans! Just announced: World-renowned recording artist <strong>Moby</strong> will play Moogfest 2011 in Asheville, Oct. 28- 30. The news comes following an already stellar music festival line-up including contemporary groundbreakers like the <strong>Flaming Lips</strong>, <strong>Passion Pit</strong>, <strong>STS9</strong>, and rare US performances by '70s electronic innovators including <strong>Tangerine Dream</strong>, <strong>Hans-Joachim Roedelius</strong> and <strong>Suicide</strong>.</p>
+			</div>
+			<ul><h4>Moogfest Weekend Pass winner</h4>
+				<li><strong>Joel W.</strong> of Atlanta, GA</li>
+			</ul>
+
+		</div>
+	</span>
+	<h3 class="toggle">30 Days of Asheville</h3>
+	<div class="slide">
+		<h4 class="">Escape your every day routine&#8230; Win a trip!</h4>
+		<div class="">
+			<p><strong>Beginning May 23</strong> you have a chance to <strong>enter daily</strong> for an opportunity to win a grand vacation to Asheville that includes a <strong>two night stay at the <a href="http://www.exploreasheville.com/where-to-stay/lodging-details/index.aspx?guid=111598c0-7292-4357-a05b-252450cc2c43" title="Grove Park Inn Resort &amp; Spa">Grove Park Inn</a></strong>, as well as multiple attraction passes and a gas card.</p>
+			<ul><h4>Week Four Winners</h4>
+				<li><strong>GRAND VACATION WINNER</strong>: Alex W. of Independence, KY</li>
+				<li><strong>Pair of 12-month Biltmore Passes</strong>: Sherrie D. of Nashville, TN</li>
+				<li><strong>Biltmore Tickets</strong>: Stephanie W. of Roanoke, VA</li>
+				<li><strong>Biltmore Tickets</strong>: Matt S. of Buford, GA</li>
+				<li><strong>Go Blue Ridge Cards</strong>: Marvin S. of Beaufort, SC</li>
+				<li><strong>Go Blue Ridge Cards</strong>: Dana K. of Knoxville, TN</li>
+				<li><strong>Tupelo Honey Cookbook</strong>: Melissa R. of Indianapolis, IN</li>
+				<li><strong>Chimney Rock Park package</strong>: Melisa B. of Greer, SC</li>
+				<li><strong>Jonas Gerard tile</strong>: Tom K. of Oakland Park, FL</li>
+				<li><strong>$20 to French Broad Chocolate Lounge</strong>: Marianne C. of Gainesville, GA</li>
+				<li><strong>Navitat tickets</strong>: Silvia M. of Lexington, KY</li>
+				<li>That's it! Unless you want to see <a href="http://www.exploreasheville.com/contests/index.aspx" title="This week only!">Moogfest for free</a> this year&#8230;</li>
+			</ul>
+			<ul><h4>Week Two Winners</h4>
+				<li><strong>Pair of 12-month Biltmore Passes</strong>: Gil L. of Miami, FL</li>
+				<li><strong>Biltmore Tickets</strong>: Susan T. of Cary, NC</li>
+				<li><strong>Pottery from Potters Mark</strong>: Stacy A. of Louisville, KY</li>
+				<li><strong>Crooked Condiments gift bag</strong>: Frank V. of Columbia, SC</li>
+				<li><strong>Art from Constance Williams</strong>: Kaitlin B. of Wittensville, KY</li>
+				<li><strong>GalloLea Organics Pizza Kit</strong>: Gail S. of Kill Devil Hills, NC</li>
+				<li><strong>Imladris Farm gift bag</strong>: Yvonne C. of Henrico, VA</li>
+				<li><strong>Fire from the Mountain Salsa/Hot Sauce</strong> Florence S of Quakertown, PA</li>
+			</ul>
+			<ul><h4>Week Two Winners</h4>
+				<li><strong>Pair of 12-month Biltmore Passes</strong>: Dominic M. of Leesburg VA</li>
+				<li><strong>Biltmore Tickets</strong>: Irene W. of Atlanta, GA</li>
+				<li><strong>Jonas Gerard Tile</strong>: Christina M. of Dacula, GA</li>
+				<li><strong>Go Blue Ridge Cards</strong>: Megan D. of Lakeland, FL</li>
+				<li><strong>Brews Cruise Tickets</strong>: Melanie S. of Raleigh, NC</li>
+				<li><strong>Imladris Farm Jam Sampler</strong>: Dina R. of Asheville, NC</li>
+				<li><strong>Potters Mark Pottery bowl</strong>: Jane B. of Belleville, IL</li>
+				<li><strong>Satisfy your Soul Chutney & Curry pack</strong> Greg G. of Georgetown, KY</li>
+			</ul>
+			<ul><h4>Week One Winners</h4>
+				<li><strong>Pair of 12-month Biltmore Passes</strong>: Joan F. of Westminster, MD</li>
+				<li><strong>Biltmore Tickets</strong>: Kristina P. of Knoxville, TN</li>
+				<li><strong>Tupelo Honey Cookbook</strong>: Rebecca C. of Chino Hills, CA</li>
+				<li><strong>Crooked Condiments mustard</strong>: Deanna B. of Goochand, VA</li>
+				<li><strong>Go Blue Ridge cards</strong>: Taylor A. of Atlanta, GA</li>
+				<li><strong>Wendy Whitson print</strong>: Melissa H. of Fayetteville, NC</li>
+				<li><strong>GalloLea Organics Pizza Kit</strong>: Samantha R. of Lyman, SC</li>
+				<li><strong>Fire from the Mountain Salsa/Hot Sauce</strong> Ally B. of Cincinnati, OH</li>
+			</ul>
+		</div>
+	</div>
+	<h3 class="toggle">Re&#8211;&#8216;Kindle&#8217; your desire for an Asheville Getaway and win!</h3>
+	<div class="slide">
+		<p><img border="0" align="right" alt="Kindle" src="http://www.exploreasheville.com/Images/kindle.png" />
+		Now is your chance to win an Amazon Kindle! Order the official 2011 Asheville Travel Guide between now and May 20 to be automatically entered to win one of the hottest gadgets on the market today. Then start planning an incredible summer escape to the beautiful mountains of Western North Carolina.
+		<br />
+		<br />
+		Our 2011 Official Travel Guide is the perfect tool for planning an enriching and invigorating mountain getaway. Request your guide today to be entered in the drawing, then keep it handy as you plan your trip.
+		<br />
+		<br />
+		Be on the lookout for more ways to win great prizes&hellip; coming soon!</p>
+		<ul>
+			<li><a title="Request a Free Travel Guide" href="http://www.exploreasheville.com/vguide.aspx">Request your FREE Travel Guide here&hellip;</a></li>
+		</ul>
+	</div>
+	<h3 class="toggle">Prize Giveaway: A Kindle for your Thoughts</h3>
+	<div class="slide">
+		<p>Want to win some awesome prizes? We've been busy crafting a new ad campaign for Asheville and we want to find out what you think. If you would be so kind as to take a <a href="http://www.surveymonkey.com/s/CPDVTYK" title="Asheville Advertising Survey" target="_blank">quick 12 question survey</a> and give us your thoughts. As a thank you we are giving away an Amazon Kindle, art from the River Arts District, Black Mountain Pottery and a Blue Ridge attractions card.</p>
+		<ul><h4>Congratulations to our contest winners!</h4>
+			<li><strong>Go Blue Ridge Cards</strong>: Karen B. of Cary, NC</li>
+			<li><strong>Black Mountain Pottery</strong>: Tanya G. of Charlotte, NC</li>
+			<li><strong>Jonas Gerard Tile</strong>: Marjorie Z. of Biltmore Lake, NC</li>
+			<li><strong>Wendy Whitson Print</strong>: Pat U. of Randleman, NC</li>
+			<li><strong>Kindle</strong>: Tori R. of Belmont, NC</li>
+		</ul>
+	</div>
+</div>
