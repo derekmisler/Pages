@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
+#FanTab{
+	width:790px !important;
+}
+.SDescription, .CSub {
+	border: solid 1px #AEAEA6;
+	border-top:0 !important;
+	background-color:#ffffff !important;
+	-webkit-box-shadow:0 0 30px rgba(0, 0, 0, 0.8), 0 0 140px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow:0 0 30px rgba(0, 0, 0, 0.8), 0 0 140px rgba(0, 0, 0, 0.1) inset;
+					box-shadow:0 0 30px rgba(0, 0, 0, 0.8), 0 0 140px rgba(0, 0, 0, 0.1) inset;
+	border:1px solid #eeeeee !important;
+}
+.SDescription::first-line{
+	display:none !important;
+}
+.CSub{
+	padding:20px !important;
+}
+.SDescription{
+	padding:40px !important;
+	margin:0 !important;
+}
+div.SDescription{
+	width:auto !important;
+}
+div.CHeader{
+}
+div.CHeader img{
+	width:auto !important;
+}
+div.CDescription, div.CRules, .SRules{
+	width:auto !important;
+}
+div.CNav{
+	background:none !important;
+	border-bottom: 0px solid #AEAEA6 !important;
+	padding:0 !important;
+}
+div.CatSideBar, div.SortSideBar{
+	background:none !important;
+}
+.CFooterDivider, .CFooter, .CShare{
+	padding:0 20px !important;	
+}
+div.CNav a.RightMenu{
+	font-weight:bold !important;
+	margin:0;
+}
+div.CBody{
+	overflow:hidden;
+	width:auto !important;
+}
+a.CButton, div.CNav a, div.CNav a.Sel{
+	width: auto;
+	background: #981e32;
+	border: 1px solid #58111d;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+	   			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+	color: white !important;
+	text-shadow:0 1px 0 rgba(0,0,0,.2);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	font-family: 'Open Sans Condensed', "HelveticaLTStdBoldCondensed", Helvetica, Arial, Verdana;
+	text-transform:uppercase;
+	font-weight:normal;
+	margin: 0;
+	margin-top:2px !important;
+	outline: none;
+	padding: 10px 20px 11px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: background-color 0.15s ease-in-out;
+	   -moz-transition: background-color 0.15s ease-in-out;
+			 -o-transition: background-color 0.15s ease-in-out;
+					transition: background-color 0.15s ease-in-out;
+	-webkit-border-radius: 2px;
+					border-radius: 2px;
+}
+a.CButton:hover, div.CNav a:hover {
+	color: white;
+	background: #6d1624;
+	border: 1px solid #58111d;
+}
+a.CButton:active, div.CNav a.Sel, , div.CNav a:active {
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+div.CNav a.Sel{
+	color:#cccccc !important;
+}
+a.CButton:focus, div.CNav a:focus {
+	-webkit-box-shadow: 0 0 4px #981e32, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-moz-box-shadow: 0 0 4px #981e32, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	box-shadow: 0 0 4px #981e32, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	color: white !important;
+}
+
+ div.CNav a.Sel, div.CNav a.Disabled:hover, div.CNav a.Disabled {
+	opacity: 0.6;
+	cursor: default;
+	background: #766a65;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #564d49;
+}
+div.fullwidtharea{
+	width:790px !important;
+}
+
+
+div.FThumbnail, div.VThumbnail{
+	margin-right:4px !important;
+}
+div.FundraiseGallaryGrid, div.ContestGallery{
+	margin-left:115px !important;
+}
+div.SideBar{
+	width:100px !important;
+	overflow:hidden !important;
+}
+input.SearchField{
+	width:88px !important;
+}
+
+h1 { font-size:4em !important; line-height:1.4em; padding:0; margin: 0; text-align:center !important; }
+h2 { font-size:3em !important; line-height:1.4em; padding:0; margin: 0; text-align:center !important; }
+h3 { font-size:2em !important; line-height:1em; padding:.325em 0 0 0; margin: 0; }
+h4 { font-size:1.25em !important; line-height:1.2em; padding:.2em 0; margin: .1em 0 .3em 0; }
+h5 { font-size:1em; line-height:1.2em; padding:.2em 0; margin: 0 0 .1em 0; }
+h6 { font-size:.85em; line-height:1.2em; padding:.2em 0; margin: 0 0 .1em 0; }
+h1, h2, h3, h4, h5, h6, b, strong { font-weight: bolder;  }
+h1, h2, h3, h4, h5, h6 {
+	color:#165788;
+	font-family: 'Open Sans Condensed', "HelveticaLTStdBoldCondensed", Helvetica, Arial, Verdana;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+h2{
+	margin-bottom:18px;
+}
+h3{
+	color:#981e32;
+}
+p, li{
+	font-size:18px;
+	font-family:'Open Sans', Verdana, Geneva, sans-serif;	
+	margin-top:0;
+}
+.img-right {display:block;float:right;margin-left:10px;clear:right;margin-top:15px;}
+.img-left {display:block;float:left;margin-right:10px;clear:left;margin-top:9px;}
+
+.panel {
+	background: #ffffff;
+	border: solid 1px #aaaaaa;
+	margin: 0 0 22px 0;
+	padding: 20px;
+	-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-webkit-border-radius: 2px;
+			border-radius: 2px;
+}
+.panel > :first-child { margin-top: 0; }
+.panel > :last-child { margin-bottom: 0; }
+
+hr {
+	display: block;
+	height: 10px;
+	background: none;
+	clear: both;
+	color: transparent;
+	outline: none !important;
+	border:none;
+	border-bottom:1px solid #aaaaaa;
+	margin-bottom: 10px;
+}
+.imgshadow, .list-wrap{
+	display:block;
+/*	-webkit-box-shadow: 0px 35px 20px -35px rgba(0, 0, 0, .3);
+	   -moz-box-shadow: 0px 35px 20px -35px rgba(0, 0, 0, .3);
+			box-shadow: 0px 35px 20px -35px rgba(0, 0, 0, .3);
+*/	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
+	border:1px solid #dddddd;
+	background-color:#aaaaaa;
+	outline:none;
+	position:relative;
+	padding:5px;
+	margin-bottom:6px;
+	-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			box-shadow:0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			
+}
+
+div.CThumbnail{
+	margin-right:5px !important;
+}
