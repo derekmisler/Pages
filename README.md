@@ -1,3 +1,7 @@
-ExploreAsheville.com Pages
-=========
-These are individual pages on ExploreAsheville.com. We have a CMS, so these pages are basically useless without it, I just need a place to track changes.
+﻿# [ExploreAsheville.com pages](http://www.exploreasheville.com.com/)
+
+These are pages on ExploreAsheville.com. Our CMS is needed to view these pages.
+
+## LICENSE
+
+Copyright (C) 2014 [Derek Misler](http://twitter.com/derekmisler)
