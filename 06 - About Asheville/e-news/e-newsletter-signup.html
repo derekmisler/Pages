@@ -1,5 +1,8 @@
+<style>
+	input[type=text],select{width:100%;}
+</style>
 <script type="text/javascript" language="javascript">
-
+<!--
 String.prototype.trim = function() {
      return this.replace(/^\s+|\s+$/g, "");
 };
@@ -9,18 +12,18 @@ function validate1()
 	var isValid = true;
 	var anyChecked = false;
 	var isNewsletterSelected = true;
-	var errorString = '';
-	var x = document.OptinForm4;
-	if (x.UEmail.value== "")
-	{ 
-	errorString = errorString + "Don't forget your email address! \n ";
-	isValid = false;
+	var errorString = "";
+	var x = document.OptinForm1;
+	if (x.UEmail.value.trim() == "")
+	{
+		errorString = errorString + "Email Address\n ";
+		isValid = false;
 	}
 	else
 	{
 		if (x.UEmail.value.indexOf("@") == -1 || x.UEmail.value.indexOf(".") == -1)
 		{
-			errorString = errorString + 'That isn\'t an email address!';
+			errorString = errorString + " Valid Email Address\n";
 			isValid = false;
 		}
 	}
@@ -55,114 +58,152 @@ function validate1()
 		return false;
 	}  
 }
+//-->
 </script>
 <form id='Optin1' class='' name='OptinForm1' method='post' action='http://click.oo155.com/OptIn.aspx?OptinFormID=1&26241823=169' onSubmit='return validate1();'>
 <input type='hidden' name='OptinFormID' value='1' />
 <input type='hidden' name='26241823' value='169' />
 	<h3>Contact Information</h3>
-	<h5 class="red">Email Address</h5>
-	<input type='text' name='UEmail'/>
-	<h5 class="red">First Name</h5>
-	<input type='text' name='field6' />
-	<h5 class="red">Last Name</h5>
-	<input type='text' name='field7' />
-	<h5>Street Address</h5>
-	<input type='text' name='field10' />
-	<h5>Apt/Suite</h5>
-	<input type='text' name='field11' />
-	<h5>City</h5>
-	<input type='text' name='field12' />
-	<h5>State</h5>
-	<select name="field13">
-		<option value="" title="** - Select State">** - Select State</option>				
-		<option value="AB" title="AB - Alberta">AB - Alberta</option>				
-		<option value="AK" title="AK - Alaska">AK - Alaska</option>				
-		<option value="AL" title="AL - Alabama">AL - Alabama</option>				
-		<option value="AR" title="AR - Arkansas">AR - Arkansas</option>				
-		<option value="AZ" title="AZ - Arizona">AZ - Arizona</option>				
-		<option value="BC" title="BC - British Columbia">BC - British Columbia</option>
-		<option value="CA" title="CA - California">CA - California</option>
-		<option value="CO" title="CO - Colorado">CO - Colorado</option>				
-		<option value="CT" title="CT - Connecticut">CT - Connecticut</option>				
-		<option value="DC" title="DC - District of Columbia">DC - District of Columbia</option>				
-		<option value="DE" title="DE - Delaware">DE - Delaware</option>				
-		<option value="FL" title="FL - Florida">FL - Florida</option>				
-		<option value="GA" title="GA - Georgia">GA - Georgia</option>				
-		<option value="HI" title="HI - Hawaii">HI - Hawaii</option>				
-		<option value="IA" title="IA - Iowa">IA - Iowa</option>				
-		<option value="ID" title="ID - Idaho">ID - Idaho</option>				
-		<option value="IL" title="IL - Illinois">IL - Illinois</option>				
-		<option value="IN" title="IN - Indiana">IN - Indiana</option>				
-		<option value="KS" title="KS - Kansas">KS - Kansas</option>				
-		<option value="KY" title="KY - Kentucky">KY - Kentucky</option>				
-		<option value="LA" title="LA - Louisiana">LA - Louisiana</option>				
-		<option value="MA" title="MA - Massachusetts">MA - Massachusetts</option>				
-		<option value="MB" title="MB - Manitoba">MB - Manitoba</option>				
-		<option value="MD" title="MD - Maryland">MD - Maryland</option>				
-		<option value="ME" title="ME - Maine">ME - Maine</option>				
-		<option value="MH" title="MH - Marshall Islands">MH - Marshall Islands</option>				
-		<option value="MI" title="MI - Michigan">MI - Michigan</option>				
-		<option value="MN" title="MN - Minnesota">MN - Minnesota</option>				
-		<option value="MO" title="MO - Missouri">MO - Missouri</option>				
-		<option value="MS" title="MS - Mississippi">MS - Mississippi</option>				
-		<option value="MT" title="MT - Montana">MT - Montana</option>				
-		<option value="NB" title="NB - New Brunswick">NB - New Brunswick</option>				
-		<option value="NC" title="NC - North Carolina">NC - North Carolina</option>				
-		<option value="ND" title="ND - North Dakota">ND - North Dakota</option>				
-		<option value="NE" title="NE - Nebraska">NE - Nebraska</option>				
-		<option value="NF" title="NF - Newfoundland">NF - Newfoundland</option>				
-		<option value="NH" title="NH - New Hampshire">NH - New Hampshire</option>				
-		<option value="NJ" title="NJ - New Jersey">NJ - New Jersey</option>				
-		<option value="NM" title="NM - New Mexico">NM - New Mexico</option>				
-		<option value="NS" title="NS - Nova Scotia">NS - Nova Scotia</option>				
-		<option value="NT" title="NT - Northwest Territory">NT - Northwest Territory</option>				
-		<option value="NV" title="NV - Nevada">NV - Nevada</option>				
-		<option value="NY" title="NY - New York">NY - New York</option>				
-		<option value="OH" title="OH - Ohio">OH - Ohio</option>				
-		<option value="OK" title="OK - Oklahoma">OK - Oklahoma</option>				
-		<option value="ON" title="ON - Ontario">ON - Ontario</option>				
-		<option value="OR" title="OR - Oregon">OR - Oregon</option>				
-		<option value="PA" title="PA - Pennsylvania">PA - Pennsylvania</option>			
-		<option value="PE" title="PE - Prince Edward Island">PE - Prince Edward Island</option>				
-		<option value="QC" title="QC - Quebec">QC - Quebec</option>				
-		<option value="RI" title="RI - Rhode Island">RI - Rhode Island</option>				
-		<option value="SAN" title="SAN - Santiago">SAN - Santiago</option>				
-		<option value="SC" title="SC - South Carolina">SC - South Carolina</option>				
-		<option value="SD" title="SD - South Dakota">SD - South Dakota</option>				
-		<option value="SK" title="SK - Saskatchewan">SK - Saskatchewan</option>				
-		<option value="TN" title="TN - Tennessee">TN - Tennessee</option>				
-		<option value="TX" title="TX - Texas">TX - Texas</option>				
-		<option value="UT" title="UT - Utah">UT - Utah</option>				
-		<option value="VA" title="VA - Virginia">VA - Virginia</option>				
-		<option value="VT" title="VT - Vermont">VT - Vermont</option>				
-		<option value="WA" title="WA - Washington">WA - Washington</option>				
-		<option value="WI" title="WI - Wisconsin">WI - Wisconsin</option>
-		<option value="WV" title="WV - West Virginia">WV - West Virginia</option>
-		<option value="WY" title="WY - Wyoming">WY - Wyoming</option>
-		<option value="YT" title="YT - Yukon">YT - Yukon</option>
-	</select>
-	<h5 class="red">Zip Code</h5>
-	<input type='text' name='field14' />
-	<h5>Phone</h5>
-	<input type='text' name='field16' />
-	<h5>Age</h5>
-	<input type='text' name='field17' />
-	<h5>Gender</h5>
-	<input type='text' name='field18' />
+	<ul class="block-grid two-up">
+		<li>
+			<h5 class="red">Email Address</h5>
+			<input type='text' name='UEmail'/>
+		</li>
+		<li>
+			<h5 class="red">First Name</h5>
+			<input type='text' name='field6' />
+		</li>
+		<li>
+			<h5 class="red">Last Name</h5>
+			<input type='text' name='field7' />
+		</li>
+		<li>
+			<h5>Street Address</h5>
+			<input type='text' name='field10' />
+		</li>
+		<li>
+			<h5>Apt/Suite</h5>
+			<input type='text' name='field11' />
+		</li>
+		<li>
+			<h5>City</h5>
+			<input type='text' name='field12' />
+		</li>
+		<li>
+			<h5>State</h5>
+			<select name="field13">
+				<option value="" title="** - Select State">** - Select State</option>
+				<option value="AB" title="AB - Alberta">AB - Alberta</option>
+				<option value="AK" title="AK - Alaska">AK - Alaska</option>
+				<option value="AL" title="AL - Alabama">AL - Alabama</option>
+				<option value="AR" title="AR - Arkansas">AR - Arkansas</option>
+				<option value="AZ" title="AZ - Arizona">AZ - Arizona</option>
+				<option value="BC" title="BC - British Columbia">BC - British Columbia</option>
+				<option value="CA" title="CA - California">CA - California</option>
+				<option value="CO" title="CO - Colorado">CO - Colorado</option>
+				<option value="CT" title="CT - Connecticut">CT - Connecticut</option>
+				<option value="DC" title="DC - District of Columbia">DC - District of Columbia</option>
+				<option value="DE" title="DE - Delaware">DE - Delaware</option>
+				<option value="FL" title="FL - Florida">FL - Florida</option>
+				<option value="GA" title="GA - Georgia">GA - Georgia</option>
+				<option value="HI" title="HI - Hawaii">HI - Hawaii</option>
+				<option value="IA" title="IA - Iowa">IA - Iowa</option>
+				<option value="ID" title="ID - Idaho">ID - Idaho</option>
+				<option value="IL" title="IL - Illinois">IL - Illinois</option>
+				<option value="IN" title="IN - Indiana">IN - Indiana</option>
+				<option value="KS" title="KS - Kansas">KS - Kansas</option>
+				<option value="KY" title="KY - Kentucky">KY - Kentucky</option>
+				<option value="LA" title="LA - Louisiana">LA - Louisiana</option>
+				<option value="MA" title="MA - Massachusetts">MA - Massachusetts</option>
+				<option value="MB" title="MB - Manitoba">MB - Manitoba</option>
+				<option value="MD" title="MD - Maryland">MD - Maryland</option>
+				<option value="ME" title="ME - Maine">ME - Maine</option>
+				<option value="MH" title="MH - Marshall Islands">MH - Marshall Islands</option>
+				<option value="MI" title="MI - Michigan">MI - Michigan</option>
+				<option value="MN" title="MN - Minnesota">MN - Minnesota</option>
+				<option value="MO" title="MO - Missouri">MO - Missouri</option>
+				<option value="MS" title="MS - Mississippi">MS - Mississippi</option>
+				<option value="MT" title="MT - Montana">MT - Montana</option>
+				<option value="NB" title="NB - New Brunswick">NB - New Brunswick</option>
+				<option value="NC" title="NC - North Carolina">NC - North Carolina</option>
+				<option value="ND" title="ND - North Dakota">ND - North Dakota</option>
+				<option value="NE" title="NE - Nebraska">NE - Nebraska</option>
+				<option value="NF" title="NF - Newfoundland">NF - Newfoundland</option>
+				<option value="NH" title="NH - New Hampshire">NH - New Hampshire</option>
+				<option value="NJ" title="NJ - New Jersey">NJ - New Jersey</option>
+				<option value="NM" title="NM - New Mexico">NM - New Mexico</option>
+				<option value="NS" title="NS - Nova Scotia">NS - Nova Scotia</option>
+				<option value="NT" title="NT - Northwest Territory">NT - Northwest Territory</option>
+				<option value="NV" title="NV - Nevada">NV - Nevada</option>
+				<option value="NY" title="NY - New York">NY - New York</option>
+				<option value="OH" title="OH - Ohio">OH - Ohio</option>
+				<option value="OK" title="OK - Oklahoma">OK - Oklahoma</option>
+				<option value="ON" title="ON - Ontario">ON - Ontario</option>
+				<option value="OR" title="OR - Oregon">OR - Oregon</option>
+				<option value="PA" title="PA - Pennsylvania">PA - Pennsylvania</option>
+				<option value="PE" title="PE - Prince Edward Island">PE - Prince Edward Island</option>
+				<option value="QC" title="QC - Quebec">QC - Quebec</option>
+				<option value="RI" title="RI - Rhode Island">RI - Rhode Island</option>
+				<option value="SAN" title="SAN - Santiago">SAN - Santiago</option>
+				<option value="SC" title="SC - South Carolina">SC - South Carolina</option>
+				<option value="SD" title="SD - South Dakota">SD - South Dakota</option>
+				<option value="SK" title="SK - Saskatchewan">SK - Saskatchewan</option>
+				<option value="TN" title="TN - Tennessee">TN - Tennessee</option>
+				<option value="TX" title="TX - Texas">TX - Texas</option>
+				<option value="UT" title="UT - Utah">UT - Utah</option>
+				<option value="VA" title="VA - Virginia">VA - Virginia</option>
+				<option value="VT" title="VT - Vermont">VT - Vermont</option>
+				<option value="WA" title="WA - Washington">WA - Washington</option>
+				<option value="WI" title="WI - Wisconsin">WI - Wisconsin</option>
+				<option value="WV" title="WV - West Virginia">WV - West Virginia</option>
+				<option value="WY" title="WY - Wyoming">WY - Wyoming</option>
+				<option value="YT" title="YT - Yukon">YT - Yukon</option>
+			</select>
+		</li>
+		<li>
+			<h5 class="red">Zip Code</h5>
+			<input type='text' name='field14' />
+		</li>
+		<li>
+			<h5>Phone</h5>
+			<input type='text' name='field16' />
+		</li>
+		<li>
+			<h5>Age</h5>
+			<input type='text' name='field17' />
+		</li>
+		<li>
+			<h5>Gender</h5>
+			<input type='text' name='field18' />
+		</li>
+	</ul>
 	<h3>Interests</h3>
-	<h5 class="clear">Arts and Culture
-	<input type="checkbox" name="field24" /></h5>
-	<h5 class="clear">Historical Attractions
-	<input type="checkbox" name="field25" /></h5>
-	<h5 class="clear">Outdoors
-	<input type="checkbox" name="field26" /></h5>
-	<h5 class="clear">Shopping
-	<input type="checkbox" name="field27" /></h5>
-	<h5 class="clear">Golf
-	<input type="checkbox" name="field28" /></h5>
-	<h5 class="clear">Food
-	<input type="checkbox" name="field29" /></h5>
-		
+	<ul class="block-grid two-up">
+		<li>
+			<h5 class="clear">Arts and Culture
+			<input type="checkbox" name="field24" /></h5>
+		</li>
+		<li>
+			<h5 class="clear">Historical Attractions
+			<input type="checkbox" name="field25" /></h5>
+		</li>
+		<li>
+			<h5 class="clear">Outdoors
+			<input type="checkbox" name="field26" /></h5>
+		</li>
+		<li>
+			<h5 class="clear">Shopping
+			<input type="checkbox" name="field27" /></h5>
+		</li>
+		<li>
+			<h5 class="clear">Golf
+			<input type="checkbox" name="field28" /></h5>
+		</li>
+		<li>
+			<h5 class="clear">Food
+			<input type="checkbox" name="field29" /></h5>
+		</li>
+	</ul>
 	<br class="clear" />
 	<input type='submit' name='submit' value='Sign Up!' class="large blue button" />
 </form>
