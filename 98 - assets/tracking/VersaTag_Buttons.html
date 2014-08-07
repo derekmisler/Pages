@@ -1,3 +1,6 @@
+<script type="text/javascript">
+//Don't copy this part, it's just here so I can see code coloring
+	
  onclick="versaTagObj.generateRequest('www.exploreasheville.com/digitaltravelguidedownloadbutton');"
  onclick="versaTagObj.generateRequest('www.exploreasheville.com/weddingsemailbutton');"
  onclick="versaTagObj.generateRequest('www.exploreasheville.com/signupformeetingsbutton');"
@@ -7,7 +10,19 @@
  onclick="versaTagObj.generateRequest('www.exploreasheville.com/searchbookingsbutton');"
  onclick="versaTagObj.generateRequest('www.exploreasheville.com/socialfollowsbutton');"
 
-<!--MOBILE-->
+//MOBILE
 
  onclick="versaTagObj.generateRequest('m.exploreasheville.com/socialfollowsbutton');"
  onclick="versaTagObj.generateRequest('m.exploreasheville.com/clicktocallbutton');"
+ 
+ 
+</script>
+
+<script type="text/javascript">
+$('.hotelPopupCont').on('click', 'a.ns-hotel-link', function() {
+	versaTagObj.generateRequest('www.exploreasheville.com/contactpropertybutton');"
+});
+$('.advopt').on('click', '.submit-btn', function() {
+	versaTagObj.generateRequest('www.exploreasheville.com/searchbookingsbutton');"
+});
+</script>
