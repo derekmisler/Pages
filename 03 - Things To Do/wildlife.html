@@ -25,28 +25,14 @@
 			</ul>
 			<h3>Tune In</h3>
 			<p>Our Ottercam is live from <strong>10 a.m. to 5 p.m.</strong> every day, and the best time to catch them being active is around 11:30 a.m. when they are being fed.</p>
-			<p class="notice">We'll be right back!</p>
-			<!--<div id="camera" style="display:none;">
-				<script language="JavaScript" type="text/javascript">
-					function reload(){
-						setTimeout('reloadImg("refresh")',1)
-					};
-					function reloadImg(id){
-						var obj = document.getElementById(id);
-						var rand = Math.random();
-						obj.src = "http://68.115.122.97:8092/snapshot.cgi?user=otterweb&pwd=wetcritters&t="+rand;
-					}
-				</script>
-				<iframe class="ie-browser imgshadow" style="display:none;overflow:hidden;" scrolling="no" height="490" width="641" src="http://68.115.122.97:8092/snapshot.cgi?user=otterweb&pwd=wetcritters&t=" name="refresh" id="refresh" onload='reload()'></iframe>
-				<div class="not-ie-browser imgshadow">
-					<img src="http://www.exploreasheville.com/includes/images/assets/ajax-loader.gif" id="loading_gif" />
-					<img border="0" height="490" width="641" src="http://68.115.122.97:8092/videostream.cgi?user=otterweb&pwd=wetcritters&resolution=32&rate=0" alt="Live Feed" />
-				</div>
+			<div id="camera" style="display:none;overflow:hidden;">
+				<iframe style="margin:-15px 0 0 -15px" scrolling="no" height="456" width="668" src="http://embed.streamvu.com/embed.html?width=668&height=441&customer=ps410180"></iframe>
+				<p>Otter cam provided by a partnership between the <a href="http://www.exploreasheville.com/listings/WNC-Nature-Center/180/default/">WNC Nature Center</a> and <a href="http://www.streamvu.com/" target="_blank">StreamVu</a>.</p>
 			</div>
 			<div id="nocamera">
 				<p class="info">The otters are resting right now. Check back after 10 a.m.</p>
-				<iframe width="641" height="490" src="http://www.youtube.com/embed/17QaE_MwIgQ?rel=0&hd=1&wmode=transparent&showinfo=0" frameborder="0" allowfullscreen wmode="transparent" class="imgshadow"></iframe>
-			</div>-->
+				<iframe width="653" height="490" src="http://www.youtube.com/embed/17QaE_MwIgQ?rel=0&hd=1&wmode=transparent&showinfo=0" frameborder="0" allowfullscreen wmode="transparent" class="imgshadow"></iframe>
+			</div>
 			<h3>See them in person</h3>
 			<p>Want to visit Obi-Wan and Olive? Make plans to stop by the <a href="http://www.exploreasheville.com/listings/WNC-Nature-Center/180/default/">WNC Nature Center</a> while in Asheville. You can see a variety of wildlife while at the park, including black bears, cougars, wolves, birds of prey and a host of amphibians and reptiles.</p>
 		</div>
@@ -132,23 +118,14 @@
 	</div>
 </div>
 <script type="text/javascript" src="http://www.exploreasheville.com/includes/scripts/tabs-hover.js"></script>
-<!--<script type="text/javascript">
-var thehour = new Date().getHours();
-if (thehour >= 10 && thehour <= 18) {
-	$('#camera').css("display", "block");
-	$('#nocamera').css("display", "none");
-	if ($.browser.msie) {
-		$(".not-ie-browser").css("display", "none");
-		$(".ie-browser").css("display", "block");
+<script type="text/javascript">
+	var thehour = new Date().getHours();
+	if (thehour >= 10 && thehour <= 17) {
+		$('#camera').css("display", "block");
+		$('#nocamera').css("display", "none");
 	}
-}
-else{
-	$('#camera').css("display", "none");
-	$('#nocamera').css("display", "block");	
-}
-
-$('#loading_gif').show();
-$('not-ie-browser').load(function(){
-  $('#loading_gif').hide();
-});
-</script>-->
+	else{
+		$('#camera').css("display", "none");
+		$('#nocamera').css("display", "block");
+	}
+</script>
