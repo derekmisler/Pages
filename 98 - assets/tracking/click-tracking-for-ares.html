@@ -1,0 +1,23 @@
+<script type="text/javascript">
+jQuery('.hotelPopupCont').on('click', 'a.ns-hotel-link', function() {
+	setTimeout(function() {
+		versaTagObj.generateRequest('http://www.exploreasheville.com/contactpropertybutton');
+	}, 1000);"
+});
+jQuery('.advopt').on('click', '.submit-btn', function() {
+	setTimeout(function() {
+		versaTagObj.generateRequest('http://www.exploreasheville.com/searchbookingsbutton');
+	}, 1000);"
+});
+//jQuery pre 1.7
+jQuery('a.ns-hotel-link').live('click', function() {
+	setTimeout(function() {
+		versaTagObj.generateRequest('http://www.exploreasheville.com/contactpropertybutton');
+	}, 1000);"
+});
+jQuery('.submit-btn').live('click', function() {
+	setTimeout(function() {
+		versaTagObj.generateRequest('http://www.exploreasheville.com/searchbookingsbutton');
+	}, 1000);"
+});
+</script>
