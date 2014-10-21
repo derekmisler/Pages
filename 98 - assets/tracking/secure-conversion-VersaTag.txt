@@ -1,6 +1,9 @@
 ﻿<!--DON'T DELETE BELOW THIS LINE-->
 
 <script type="text/javascript">
+var numberofnights = jQuery('td.hotel-order-col4:last').prev().text(),
+value = jQuery('table.booking-info td.bi-label').first().text();
+
 var versaTag = {};
 versaTag.id = "1848";
 versaTag.sync = 0;
@@ -8,7 +11,7 @@ versaTag.dispType = "js";
 versaTag.ptcl = "HTTPS";
 versaTag.bsUrl = "bs.serving-sys.com/BurstingPipe";
 versaTag.activityParams = {
-"OrderID":"","Session":"","Value":"","productid":"","productinfo":"","Quantity":"","Stage":"Goal Conversion","Number of Nights":$('table.booking-info td.bi-label').first().text(),"Price Value":$('td.hotel-order-col4 strong').first().text()};
+"OrderID":"","Session":"","Value":"","productid":"","productinfo":"","Quantity":"","Stage":"Goal Conversion","Number of Nights":numberofnights,"Price Value":value};
 versaTag.retargetParams = {};
 versaTag.dynamicRetargetParams = {};
 versaTag.conditionalParams = {};
