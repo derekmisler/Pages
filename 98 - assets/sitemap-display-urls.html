@@ -1,0 +1,56 @@
+<style>
+	html,
+	body{
+		margin:0 !important;
+		padding:0 !important;
+		background:none !important;
+		background-position: left top !important;
+	}
+	#leaves,
+	#wrapperHeader,
+	.navWrapper,
+	#wrapperMainImg,
+	#wrapperFooter,
+	#c1,
+	#c3{
+		display:none !important;
+	}
+	#wrapper,
+	.interiorBg,
+	#wrapperinner{
+		background:none !important;
+	}
+	#wrapperPage{
+		margin-top:0 !important;
+	}
+	#wrapperadjustposition,
+	#wrapperinner,
+	#wrapperContent,
+	#c2{
+		margin:0 !important;
+		padding:0 !important;
+		width:auto !important;
+	}
+	#slideshow{
+		background:none !important;
+	}
+	a{
+		color:#666666 !important;
+	}
+	h1,h2,h3,h5,h6{
+		display: none !important;
+	}
+</style>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var currentURL;
+		var currentEl = $(".sitemap").find("a[href]");
+		currentEl.each(function() {
+			currentURL = $(this).attr("href");
+			$(this).replaceWith(currentURL);
+			$(this).remove(currentURL);
+		});
+	});
+</script>
