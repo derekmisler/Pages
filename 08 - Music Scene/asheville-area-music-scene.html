@@ -3,149 +3,151 @@
 <link href="/includes/css/music.css" rel="stylesheet" media="all" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 
-<div class="row">
-	<div class="seven columns centered">
-		<h1>Asheville Area Music Scene</h1>
+<div ng-app="musicApp">
+	<div class="row">
+		<div class="seven columns centered">
+			<h1>Asheville Area Music Scene</h1>
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="seven columns centered intro">
-		<p>Asheville’s music scene is born of age old traditions, nurtured by a spirit of independence and the muse of the mountain skyline. The embracing atmosphere reflects a sense of place, harmonic yet playfully divergent and diverse. In a scene that’s on the verge, Asheville’s talented wellspring of music lovers and creators offer the musically minded traveler multi-layered experiences, innovative sounds and the irresistible urge to move. Play on in, won’t you?</p>
-		<p>&nbsp;</p>
+	<div class="row">
+		<div class="seven columns centered intro">
+			<p>Asheville’s music scene is born of age old traditions, nurtured by a spirit of independence and the muse of the mountain skyline. The embracing atmosphere reflects a sense of place, harmonic yet playfully divergent and diverse. In a scene that’s on the verge, Asheville’s talented wellspring of music lovers and creators offer the musically minded traveler multi-layered experiences, innovative sounds and the irresistible urge to move. Play on in, won’t you?</p>
+			<p>&nbsp;</p>
+		</div>
 	</div>
-</div>
 
 
-<div class="row" id="videos">
-	<div id="buttons">
-		<ul class="nav">
-			<li><h3 class="headline">Music Highlights</h3></li>
-			<li><a class="current" href="#heritage">Asheville's Music Heritage</a></li>
-			<li><a href="#orange-peel">Orange Peel</a></li>
-			<li><a href="#street">Street Scene</a></li>
-			<li><a href="#buskers">Buskers</a></li>
-		</ul>
-		<div class="list-wrap">
-			<div id="heritage">
-				<div class="fluidmedia">
-					<iframe width="720" height="405" src="https://www.youtube.com/embed/7cpk7PTN7xA?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+	<div class="row" id="videos">
+		<div id="buttons">
+			<ul class="nav">
+				<li><h3 class="headline">Music Highlights</h3></li>
+				<li><a class="current" href="#heritage">Asheville's Music Heritage</a></li>
+				<li><a href="#orange-peel">Orange Peel</a></li>
+				<li><a href="#street">Street Scene</a></li>
+				<li><a href="#buskers">Buskers</a></li>
+			</ul>
+			<div class="list-wrap">
+				<div id="heritage">
+					<div class="fluidmedia">
+						<iframe width="720" height="405" src="https://www.youtube.com/embed/7cpk7PTN7xA?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<p class="caption"><strong>Making Music in the Blue Ridge Mountains</strong><br />The sounds of bluegrass and old-time music have their roots in the Appalachian mountain region around Asheville, N.C., where visitors can hear live music any night of the week: www.ExploreAsheville.com/music Asheville’s many festivals and diverse venues keep the area’s musical heritage alive and make it a unique destination for lovers of both traditional and contemporary music. <a href="http://www.exploreasheville.com/music-scene/evolution-of-mountain-music/">Learn more about Asheville's Music Heritage</a></p>
 				</div>
-				<p class="caption"><strong>Making Music in the Blue Ridge Mountains</strong><br />The sounds of bluegrass and old-time music have their roots in the Appalachian mountain region around Asheville, N.C., where visitors can hear live music any night of the week: www.ExploreAsheville.com/music Asheville’s many festivals and diverse venues keep the area’s musical heritage alive and make it a unique destination for lovers of both traditional and contemporary music. <a href="http://www.exploreasheville.com/music-scene/evolution-of-mountain-music/">Learn more about Asheville's Music Heritage</a></p>
-			</div>
-			<div id="orange-peel" class="hide">
-				<img src="http://www.exploreasheville.com/includes/images/music/orange-peel.jpg" />
-				<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
-			</div>
-			<div id="street" class="hide">
-				<img src="http://www.exploreasheville.com/includes/images/music/pack-square-singing.jpg" />
-				<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
-			</div>
-			<div id="buskers" class="hide">
-				<img src="http://www.exploreasheville.com/includes/images/music/flat-iron.jpg" />
-				<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
+				<div id="orange-peel" class="hide">
+					<img src="http://www.exploreasheville.com/includes/images/music/orange-peel.jpg" />
+					<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
+				</div>
+				<div id="street" class="hide">
+					<img src="http://www.exploreasheville.com/includes/images/music/pack-square-singing.jpg" />
+					<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
+				</div>
+				<div id="buskers" class="hide">
+					<img src="http://www.exploreasheville.com/includes/images/music/flat-iron.jpg" />
+					<p class="caption">Stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<br class="clear" />
-<div class="row">
-	<div class="six columns">
-		<h2 id="calendar">Music &amp; Festival Calendar</h2>
-		<sv:widget type="events" width="100" height="100"><sv:param name="action" value="showall"></sv:param><sv:param name="randomnum" value="0"></sv:param><sv:param name="catid" value="9,12"></sv:param></sv:widget>
-	</div>
-	<div class="six columns">
-		<div class="row">
-			<div class="seven columns featured-story equalheight">
-				<div id="venues" class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/venues.jpg" />
-					<div class="caption">
-						<h3>Venues</h3>
-						<p>Asheville's thriving music scene means that literally hundreds of bands and musicians make their way through the city during the year. The best way to tap into Asheville's live music is to experience it first-hand at one of our local venues.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/venues/">Find out where to see live music.</a></p>
+	<br class="clear" />
+	<div class="row">
+		<div class="six columns">
+			<h2 id="calendar">Music &amp; Festival Calendar</h2>
+			<sv:widget type="events" width="100" height="100"><sv:param name="action" value="showall"></sv:param><sv:param name="randomnum" value="0"></sv:param><sv:param name="catid" value="9,12"></sv:param></sv:widget>
+		</div>
+		<div class="six columns">
+			<div class="row">
+				<div class="seven columns featured-story equalheight">
+					<div id="venues" class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/venues.jpg" />
+						<div class="caption">
+							<h3>Venues</h3>
+							<p>Asheville's thriving music scene means that literally hundreds of bands and musicians make their way through the city during the year. The best way to tap into Asheville's live music is to experience it first-hand at one of our local venues.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/venues/">Find out where to see live music.</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="five columns equalheight">
+					<div id="soundcloudPlayer"></div>
+				</div>
+			</div>
+			<br class="clear" />
+			<div class="row">
+				<div id="booking" class="five columns equalheight">
+					<script src="http://arestravel.com/js/_default/ARESbot.js?bundle=ashevillecvb&nc=1&tpl=widget" type="text/javascript"></script>
+				</div>
+				<div class="seven columns featured-story equalheight">
+					<div id="festivals" class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/festivals.jpg" />
+						<div class="caption">
+							<h3>Festivals</h3>
+							<p>From the local and national acts that performed at Moogfest and Mountain Oasis, to the global performers at July's Folkmoot festival in nearby Waynesville, the Asheville area's summer music festivals are as eclectic as the city itself.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/festivals/">See upcoming music festivals in Asheville.</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="five columns equalheight">
-				<div id="soundcloudPlayer"></div>
-			</div>
 		</div>
-		<br class="clear" />
-		<div class="row">
-			<div id="booking" class="five columns equalheight">
-				<script src="http://arestravel.com/js/_default/ARESbot.js?bundle=ashevillecvb&nc=1&tpl=widget" type="text/javascript"></script>
-			</div>
-			<div class="seven columns featured-story equalheight">
-				<div id="festivals" class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/festivals.jpg" />
-					<div class="caption">
-						<h3>Festivals</h3>
-						<p>From the local and national acts that performed at Moogfest and Mountain Oasis, to the global performers at July's Folkmoot festival in nearby Waynesville, the Asheville area's summer music festivals are as eclectic as the city itself.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/festivals/">See upcoming music festivals in Asheville.</a></p>
+	</div>
+	<br class="clear" />
+	<div class="row">
+		<div class="six columns">
+			<h4>Related Stories</h4>
+			<ul class="twelve columns block-grid two-up">
+				<li>
+					<div class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/drum-circle-square.jpg" />
+						<div class="caption">
+							<h3>Shopping</h3>
+							<p>Every street downtown leads to a treasure-trove of music businesses that could only flourish in Asheville. There is a diverse mix of record shops, along with specialty stores like clothing and music merchandise, and electronics.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/music-shopping/">Check out Asheville music stores.</a></p>
+						</div>
 					</div>
+				</li>
+				<li>
+					<div class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/musical-instruments.jpg">
+						<div class="caption">
+							<h3>Evolution of Mountain Music</h3>
+							<p>Asheville's musical legacy has deep roots. The story begins with Scotch-Irish immigrants who settled Western North Carolina because the mountains and rolling hills reminded them of home. They brought their haunting melodies and traditional ballads and influenced the local music scene for centuries to come.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/evolution-of-mountain-music/">Learn more about Asheville's music history.</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/jam-session-at-the-millroom.jpg" />
+						<div class="caption">
+							<h3>Music Itineraries</h3>
+							<p>Enjoy the unique traditions of the Festival of Native Peoples in Cherokee or listen to the indie bands at the Lexington Avenue Arts &amp; Fun Festival. Whatever your musical tastes, Asheville's music festivals provide another compelling mix of musical sounds.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/itineraries/">Check out recommended music itineraries.</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="nav-square">
+						<img src="http://www.exploreasheville.com/includes/images/music/live-stream.jpg">
+						<div class="caption">
+							<h3>Listen/Watch</h3>
+							<p>Today, Asheville's music scene is all encompassing. Traditional mountain music still rings out from national artists such as David Holt and Laura Boosinger who live in the area. Classical music from the Asheville Symphony Orchestra fills the Thomas Wolfe Auditorium throughout the year.</p>
+							<p><a href="http://www.exploreasheville.com/music-scene/listen-watch/">View Asheville music videos.</a></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="six columns featured-story">
+			<div class="nav-square">
+				<img src="http://www.exploreasheville.com/includes/images/music/bluegrass-at-isis.jpg" />
+				<div class="caption">
+					<h3>Bluegrass to Newgrass to Nograss</h3>
+					<p>A progressive and collaborative arts community, Asheville's modern music scene melds old and new with surprising ease. Music permeates the city from the street musicians who serenade you downtown, to multi-generation bluegrass jam sessions, to a rock club named one of the best in the country by Rolling Stone.</p>
+					<p><a href="http://www.exploreasheville.com/music-scene/bluegrass-newgrass-nograss/">Learn more about Asheville's music scene.</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<br class="clear" />
-<div class="row">
-	<div class="six columns">
-		<h4>Related Stories</h4>
-		<ul class="twelve columns block-grid two-up">
-			<li>
-				<div class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/drum-circle-square.jpg" />
-					<div class="caption">
-						<h3>Shopping</h3>
-						<p>Every street downtown leads to a treasure-trove of music businesses that could only flourish in Asheville. There is a diverse mix of record shops, along with specialty stores like clothing and music merchandise, and electronics.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/music-shopping/">Check out Asheville music stores.</a></p>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/musical-instruments.jpg">
-					<div class="caption">
-						<h3>Evolution of Mountain Music</h3>
-						<p>Asheville's musical legacy has deep roots. The story begins with Scotch-Irish immigrants who settled Western North Carolina because the mountains and rolling hills reminded them of home. They brought their haunting melodies and traditional ballads and influenced the local music scene for centuries to come.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/evolution-of-mountain-music/">Learn more about Asheville's music history.</a></p>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/jam-session-at-the-millroom.jpg" />
-					<div class="caption">
-						<h3>Music Itineraries</h3>
-						<p>Enjoy the unique traditions of the Festival of Native Peoples in Cherokee or listen to the indie bands at the Lexington Avenue Arts &amp; Fun Festival. Whatever your musical tastes, Asheville's music festivals provide another compelling mix of musical sounds.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/itineraries/">Check out recommended music itineraries.</a></p>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="nav-square">
-					<img src="http://www.exploreasheville.com/includes/images/music/live-stream.jpg">
-					<div class="caption">
-						<h3>Listen/Watch</h3>
-						<p>Today, Asheville's music scene is all encompassing. Traditional mountain music still rings out from national artists such as David Holt and Laura Boosinger who live in the area. Classical music from the Asheville Symphony Orchestra fills the Thomas Wolfe Auditorium throughout the year.</p>
-						<p><a href="http://www.exploreasheville.com/music-scene/listen-watch/">View Asheville music videos.</a></p>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="six columns featured-story">
-		<div class="nav-square">
-			<img src="http://www.exploreasheville.com/includes/images/music/bluegrass-at-isis.jpg" />
-			<div class="caption">
-				<h3>Bluegrass to Newgrass to Nograss</h3>
-				<p>A progressive and collaborative arts community, Asheville's modern music scene melds old and new with surprising ease. Music permeates the city from the street musicians who serenade you downtown, to multi-generation bluegrass jam sessions, to a rock club named one of the best in the country by Rolling Stone.</p>
-				<p><a href="http://www.exploreasheville.com/music-scene/bluegrass-newgrass-nograss/">Learn more about Asheville's music scene.</a></p>
-			</div>
-		</div>
-	</div>
-</div>
-<script src="http://www.exploreasheville.com/includes/scripts/tabs-hover.js" type="text/javascript"></script>
 <script src="http://connect.soundcloud.com/sdk-2.0.0.js" type="text/javascript"></script>
 <script src="http://www.exploreasheville.com/includes/scripts/music/music.js" type="text/javascript"></script>
+<script src="http://www.exploreasheville.com/includes/scripts/music/controllers/mainController.js"></script>
