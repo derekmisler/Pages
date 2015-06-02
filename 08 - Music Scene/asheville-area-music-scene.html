@@ -5,10 +5,10 @@
 <script src="http://www.exploreasheville.com/includes/scripts/music/controllers/mainController.js"></script>
 
 <div class="container" ng-app="musicApp">
-	<div class="row" ng-controller="introController">
+	<div class="row">
 		<div class="seven columns centered intro">
-			<h1 class="ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h1>
-			<p class="ng-cloak ng-hide-animate" ng-cloak>{{ intro }}</p>
+			<h1>Asheville Area Music Scene</h1>
+			<p>Asheville’s music scene is born of age old traditions, nurtured by a spirit of independence and the muse of the mountain skyline. The embracing atmosphere reflects a sense of place, harmonic yet playfully divergent and diverse. In a scene that’s on the verge, Asheville’s talented wellspring of music lovers and creators offer the musically minded traveler multi-layered experiences, innovative sounds and the irresistible urge to move. Play on in, won’t you?</p>
 			<p>&nbsp;</p>
 		</div>
 	</div>
@@ -86,47 +86,17 @@
 		</div>
 	</div>
 	<br class="clear" />
-	<div class="row">
+	<div class="row" ng-controller="storiesController">
 		<div class="six columns">
-			<h4>Related Stories</h4>
+			<h4 class="ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h4>
 			<ul class="twelve columns block-grid two-up">
-				<li>
+				<li ng-repeat="story in stories | orderBy:random" >
 					<div class="nav-square">
-						<img src="http://www.exploreasheville.com/includes/images/music/drum-circle-square.jpg" />
+						<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ story.image }}" />
 						<div class="caption">
-							<h3>Shopping</h3>
-							<p>Every street downtown leads to a treasure-trove of music businesses that could only flourish in Asheville. There is a diverse mix of record shops, along with specialty stores like clothing and music merchandise, and electronics.</p>
-							<p><a href="http://www.exploreasheville.com/music-scene/music-shopping/">Check out Asheville music stores.</a></p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="nav-square">
-						<img src="http://www.exploreasheville.com/includes/images/music/musical-instruments.jpg">
-						<div class="caption">
-							<h3>Evolution of Mountain Music</h3>
-							<p>Asheville's musical legacy has deep roots. The story begins with Scotch-Irish immigrants who settled Western North Carolina because the mountains and rolling hills reminded them of home. They brought their haunting melodies and traditional ballads and influenced the local music scene for centuries to come.</p>
-							<p><a href="http://www.exploreasheville.com/music-scene/evolution-of-mountain-music/">Learn more about Asheville's music history.</a></p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="nav-square">
-						<img src="http://www.exploreasheville.com/includes/images/music/jam-session-at-the-millroom.jpg" />
-						<div class="caption">
-							<h3>Music Itineraries</h3>
-							<p>Enjoy the unique traditions of the Festival of Native Peoples in Cherokee or listen to the indie bands at the Lexington Avenue Arts &amp; Fun Festival. Whatever your musical tastes, Asheville's music festivals provide another compelling mix of musical sounds.</p>
-							<p><a href="http://www.exploreasheville.com/music-scene/itineraries/">Check out recommended music itineraries.</a></p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="nav-square">
-						<img src="http://www.exploreasheville.com/includes/images/music/live-stream.jpg">
-						<div class="caption">
-							<h3>Listen/Watch</h3>
-							<p>Today, Asheville's music scene is all encompassing. Traditional mountain music still rings out from national artists such as David Holt and Laura Boosinger who live in the area. Classical music from the Asheville Symphony Orchestra fills the Thomas Wolfe Auditorium throughout the year.</p>
-							<p><a href="http://www.exploreasheville.com/music-scene/listen-watch/">View Asheville music videos.</a></p>
+							<h3 class="ng-cloak ng-hide-animate" ng-cloak>{{ story.title }}</h3>
+							<p class="ng-cloak ng-hide-animate" ng-cloak>{{ story.caption }}</p>
+							<p><a href ng-href="{{ story.URL }}">{{ story.link }}</a></p>
 						</div>
 					</div>
 				</li>
@@ -134,11 +104,11 @@
 		</div>
 		<div class="six columns featured-story">
 			<div class="nav-square">
-				<img src="http://www.exploreasheville.com/includes/images/music/bluegrass-at-isis.jpg" />
+				<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ featuredImage }}" />
 				<div class="caption">
-					<h3>Bluegrass to Newgrass to Nograss</h3>
-					<p>A progressive and collaborative arts community, Asheville's modern music scene melds old and new with surprising ease. Music permeates the city from the street musicians who serenade you downtown, to multi-generation bluegrass jam sessions, to a rock club named one of the best in the country by Rolling Stone.</p>
-					<p><a href="http://www.exploreasheville.com/music-scene/bluegrass-newgrass-nograss/">Learn more about Asheville's music scene.</a></p>
+					<h3>{{ featuredTitle }}</h3>
+					<p>{{ featuredContent }}</p>
+					<p><a href ng-href="{{ featuredURL }}">{{ featuredLink }}</a></p>
 				</div>
 			</div>
 		</div>
