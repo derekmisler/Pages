@@ -1,7 +1,7 @@
 <meta name="robots" content="none">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Rock+Salt' rel='stylesheet' type='text/css'>
 <link href="/includes/css/music.css" rel="stylesheet" media="all" type="text/css" />
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 <script src="http://www.exploreasheville.com/includes/scripts/music/controllers/mainController.js"></script>
 
 <div class="container" ng-app="musicApp">
@@ -17,12 +17,12 @@
 		<div id="buttons">
 			<ul class="nav">
 				<li><h3 class="headline ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h3></li>
-				<li ng-repeat="slide in slides | limitTo:numSlides:1"><a ng-class="{current:$first}" class="ng-cloak ng-hide-animate" ng-cloak ng-href="#{{ slide.ID }}">{{ slide.title }}</a></li>
+				<li ng-repeat="slide in slides | limitTo:slides.length:1"><a ng-class="{current:$first}" class="ng-cloak ng-hide-animate" ng-cloak ng-href="#{{ slide.ID }}">{{ slide.title }}</a></li>
 			</ul>
 			<div class="list-wrap">
-				<div ng-class="{hide:!$first}" ng-repeat="slide in slides | limitTo:numSlides:1" id="{{ slide.ID }}">
+				<div ng-class="{hide:!$first}" ng-repeat="slide in slides | limitTo:slides.length:1" id="{{ slide.ID }}">
 					<div ng-if="slide.youtubeID" class="fluidmedia">
-						<iframe width="720" height="405" ng-src="{{ youtube + slide.youtubeID + youtubeOptions | trustAsResourceUrl}}" frameborder="0" allowfullscreen></iframe>
+						<iframe width="720" height="405" ng-src="{{ youtube + slide.youtubeID + youtubeOptions }}" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<img ng-if="!slide.youtubeID" ng-src="http://www.exploreasheville.com/includes/images/music/{{ slide.image }}" />
 					<p class="caption ng-cloak ng-hide-animate" ng-cloak><strong>{{ slide.subtitle }}</strong><br />{{ slide.caption }}<br /><a ng-href="{{ slide.URL }}">{{ slide.link }}</a></p>
@@ -76,7 +76,7 @@
 		<div class="six columns">
 			<h4 class="ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h4>
 			<ul class="twelve columns block-grid two-up">
-				<li ng-repeat="story in stories | orderBy:random | limitTo:numStories:1 | filter:{featured:'false'}" >
+				<li ng-repeat="story in stories | orderBy:random | limitTo:stories.length:1 | filter:{featured:'false'}" >
 					<div class="nav-square">
 						<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ story.image }}" />
 						<div class="caption">
@@ -89,7 +89,7 @@
 			</ul>
 		</div>
 		<div class="six columns featured-story">
-			<div class="nav-square" ng-repeat="story in stories | orderBy:random | limitTo:featuredStories:1 | filter:{featured:'true'}">
+			<div class="nav-square" ng-repeat="story in stories | orderBy:random | filter:{featured:'true'}">
 				<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ story.image }}" />
 				<div class="caption">
 					<h3 class="ng-cloak ng-hide-animate" ng-cloak>{{ story.title }}</h3>
