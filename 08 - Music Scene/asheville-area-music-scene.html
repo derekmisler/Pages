@@ -13,21 +13,23 @@
 		</div>
 	</div>
 
-	<div class="row" id="videos" ng-controller="SlideshowController">
-		<div id="highlights">
-			<ul class="nav">
-				<li><h3 class="headline ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h3></li>
-				<li ng-repeat="slide in slides | limitTo:slides.length:1"><a ng-class="{current:$first}" class="ng-cloak ng-hide-animate" ng-cloak ng-href="#{{ slide.ID }}">{{ slide.title }}</a></li>
-			</ul>
-			<div class="list-wrap">
-				<div ng-class="{hide:!$first}" ng-repeat="slide in slides | limitTo:slides.length:1" id="{{ slide.ID }}">
-					<div ng-if="slide.youtubeID" class="fluidmedia">
-						<iframe width="720" height="405" ng-src="{{ youtube + slide.youtubeID + youtubeOptions }}" frameborder="0" allowfullscreen></iframe>
+	<div class="row" id="highlightsWrapper" ng-controller="SlideshowController">
+		<ul class="nav">
+			<li class="title">{{ title }}</li>
+			<li ng-repeat="slide in slides">
+				<a ng-href="" ng-click="scrollTo(slide,$index)">{{ slide.title }}</a>
+			</li>
+		</ul>
+		<div id="highlights" ng-style="imagewrapper">
+			<ul ng-style="listposition">
+				<li ng-repeat="slide in slides" id="{{ slide.ID }}" ng-style="imagewrapper">
+					<div ng-if="slide.youtube" class="fluidmedia">
+						<iframe width="720" height="405" ng-src="{{ youtubeURL + slide.youtube + youtubeOptions }}" frameborder="0" allowfullscreen></iframe>
 					</div>
-					<img ng-if="!slide.youtubeID" ng-src="http://www.exploreasheville.com/includes/images/music/{{ slide.image }}" />
-					<p class="caption ng-cloak ng-hide-animate" ng-cloak><strong>{{ slide.subtitle }}</strong><br />{{ slide.caption }}<br /><a ng-href="{{ slide.URL }}">{{ slide.link }}</a></p>
-				</div>
-			</div>
+					<img ng-if="!slide.youtube" ng-src="{{ imageURL + slide.image }}" />
+					<p class="caption"><strong>{{ slide.subtitle }}</strong><br />{{ slide.caption }}<br /><a ng-href="{{ slide.URL }}">{{ slide.link }}</a></p>
+				</li>
+			</ul>
 		</div>
 	</div>
 
@@ -74,15 +76,15 @@
 	<br class="clear" />
 	<div class="row" ng-controller="StoriesController">
 		<div class="six columns">
-			<h4 class="ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h4>
+			<h4>{{ title }}</h4>
 			<ul class="twelve columns block-grid two-up">
 				<li ng-repeat="story in stories | orderBy:random | limitTo:stories.length:1 | filter:{featured:'false'}" >
 					<div class="nav-square">
-						<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ story.image }}" />
+						<img ng-src="{{ imageURL + story.image }}" />
 						<div class="caption">
-							<h3 class="ng-cloak ng-hide-animate" ng-cloak>{{ story.title }}</h3>
-							<p class="ng-cloak ng-hide-animate" ng-cloak>{{ story.caption | limitTo:200 }}...</p>
-							<p><a href ng-href="{{ story.URL }}">{{ story.link }}</a></p>
+							<h3>{{ story.title }}</h3>
+							<p>{{ story.caption | limitTo:200 }}...</p>
+							<p><a href="" ng-href="{{ story.URL }}">{{ story.link }}</a></p>
 						</div>
 					</div>
 				</li>
@@ -90,11 +92,11 @@
 		</div>
 		<div class="six columns featured-story">
 			<div class="nav-square" ng-repeat="story in stories | orderBy:random | filter:{featured:'true'}">
-				<img ng-src="http://www.exploreasheville.com/includes/images/music/{{ story.image }}" />
+				<img ng-src="{{ imageURL + story.image }}" />
 				<div class="caption">
-					<h3 class="ng-cloak ng-hide-animate" ng-cloak>{{ story.title }}</h3>
-					<p class="ng-cloak ng-hide-animate" ng-cloak>{{ story.caption }}</p>
-					<p><a href ng-href="{{ story.URL }}">{{ story.link }}</a></p>
+					<h3>{{ story.title }}</h3>
+					<p>{{ story.caption }}</p>
+					<p><a href="" ng-href="{{ story.URL }}">{{ story.link }}</a></p>
 				</div>
 			</div>
 		</div>
