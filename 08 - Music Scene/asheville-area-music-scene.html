@@ -1,5 +1,5 @@
 <meta name="robots" content="none">
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Rock+Salt' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Rock+Salt" rel="stylesheet" type="text/css">
 <link href="/includes/css/music.css" rel="stylesheet" media="all" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 <script src="http://www.exploreasheville.com/includes/scripts/music/controllers/mainController.js"></script>
@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="row" id="videos" ng-controller="SlideshowController">
-		<div id="buttons">
+		<div id="highlights">
 			<ul class="nav">
 				<li><h3 class="headline ng-cloak ng-hide-animate" ng-cloak>{{ title }}</h3></li>
 				<li ng-repeat="slide in slides | limitTo:slides.length:1"><a ng-class="{current:$first}" class="ng-cloak ng-hide-animate" ng-cloak ng-href="#{{ slide.ID }}">{{ slide.title }}</a></li>
