@@ -13,16 +13,16 @@
 		</div>
 	</div>
 
-	<div class="row" id="highlightsWrapper" ng-controller="SlideshowController" ng-cloak="ng-cloak">
+	<div class="row" id="highlightsWrapper" ng-controller="SlideshowController" ng-class="{active:true}">
 		<ul class="nav">
 			<li class="title">{{ title }}</li>
-			<li ng-repeat="slide in slides">
+			<li ng-repeat="slide in getSlides()">
 				<a ng-href="" ng-click="scrollTo(slide,$index)">{{ slide.title }}</a>
 			</li>
 		</ul>
 		<div id="highlights" ng-style="imagewrapper">
 			<ul ng-style="listposition">
-				<li ng-repeat="slide in slides" id="{{ slide.ID }}" ng-style="imagewrapper">
+				<li ng-repeat="slide in getSlides()" id="{{ slide.ID }}" ng-style="imagewrapper">
 					<div ng-if="slide.youtube" class="fluidmedia">
 						<iframe width="720" height="405" ng-src="{{ youtubeURL + slide.youtube + youtubeOptions }}" frameborder="0" allowfullscreen></iframe>
 					</div>
@@ -78,7 +78,7 @@
 		<div class="six columns">
 			<h4>{{ title }}</h4>
 			<ul class="twelve columns block-grid two-up">
-				<li ng-repeat="story in stories | orderBy:random | limitTo:stories.length:1 | filter:{featured:'false'}" >
+				<li ng-repeat="story in getStories() | orderBy:random | limitTo:getStories().length:1 | filter:{featured:'false'}" >
 					<div class="nav-square">
 						<img ng-src="{{ imageURL + story.image }}" />
 						<div class="caption">
@@ -91,7 +91,7 @@
 			</ul>
 		</div>
 		<div class="six columns featured-story">
-			<div class="nav-square" ng-repeat="story in stories | orderBy:random | filter:{featured:'true'}">
+			<div class="nav-square" ng-repeat="story in getStories() | orderBy:random | filter:{featured:'true'}">
 				<img ng-src="{{ imageURL + story.image }}" />
 				<div class="caption">
 					<h3>{{ story.title }}</h3>
