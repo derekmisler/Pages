@@ -1,28 +1,104 @@
 <meta name="robots" content="none">
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Rock+Salt" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<style>
+	#l-mainContent > h3,
+	.evnt-listing-content p,
+	.evnt-content .socialMediaIcons,
+	.evnt-listing .linksHolder,
+	.evnt-listing .linksHolder li,
+	.filterHolder,
+	.evnt-content .detail,
+	#eventLayoutBuyTicketButton,
+	.evnt-listing .listingImage {
+		display: none !important;
+	}
+	#l-mainContent,
+	#packages {
+		height: 340px !important;
+		overflow-y: scroll !important;
+		padding: 1rem 0 !important;
+/*		box-shadow: inset 0 -1px 5px -3px rgba(0,0,0,1), inset 0 1px 5px -3px rgba(0,0,0,1);*/
+		border-top: 1px solid rgba(0, 0, 0, 0.25);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+		overflow-x: hidden !important;
+	}
+	#l-mainContent .evnt-listing,
+	#l-mainContent .evnt-content {
+		width: auto !important;
+		overflow: hidden !important;
+		border: none !important;
+		background: none !important;
+		box-shadow: none !important;
+	}
+	.evnt-listing-content {
+		padding: 0 !important;
+	}
+	#l-mainContent .evnt-content h3 {
+		display: block !important;
+		float: right !important;
+		width: 75% !important;
+	}
+	#l-mainContent .evnt-content h3 a {
+		display: block !important;
+	}
+	.evnt-listing-content ul li {
+		display: none !important;
+	}
+	.evnt-listing-content ul li.event-dates {
+		display: block !important;
+		float: left !important;
+		width: 25% !important;
+		line-height: 13px !important;
+	}
+	.evnt-listing ul, #packages li.dates .date strong {
+		line-height: 13px !important;
+	}
+	
+	#aresContent .numbers li {
+		width: 68px !important;
+	}
+	#aresContent li.aresCenter {
+		width: 93% !important;
+	}
+	.rock-salt{
+		font-family: 'Rock Salt', "HelveticaLTStdCondensed", Helvetica, Arial, Verdana, sans-serif !important;
+		font-weight: bold !important;
+		margin-bottom: 1rem !important;
+		line-height: 2 !important;
+		text-align: center !important;
+	}
+</style>
 <div>
 	<div class="container">
 		<div class="row">
 			<div class="seven columns centered">
-				<h1>Asheville Area Music Scene</h1>
-				<p>Asheville’s music scene is born of age old traditions, nurtured by a spirit of independence and the muse of the mountain skyline. The embracing atmosphere reflects a sense of place, harmonic yet playfully divergent and diverse. In a scene that’s on the verge, Asheville’s talented wellspring of music lovers and creators offer the musically minded traveler multi-layered experiences, innovative sounds and the irresistible urge to move. Play on in, won’t you?</p>
-				<p>&nbsp;</p>
+				<h1>Savor the Last Days of Summer in Asheville, NC</h1>
+				<p>With summer starting to wind down, it’s the perfect time to visit. Here in the gently rolling Appalachian mountains the temperatures are pleasant, making it ideal to enjoy the many outdoor adventures the Asheville area has to offer. Feel the wind in your hair as you wind along the renowned Blue Ridge Parkway, relaxing in the shadow of some of America’s highest peaks. Take in the mountain air while dining al fresco, enjoying the lively music of street buskers, or browsing amongst our many art galleries and one-of-a-kind boutiques.</p>
+				<hr>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="six columns">
+			<div class="nine columns">
+				<div class="row">
+					<div class="six columns">
+						<h4 class="rock-salt">Upcoming Events</h4>
+						<sv:widget type="events" width="100" height="100"><sv:param name="action" value="showrandom"></sv:param><sv:param name="randomnum" value="20"></sv:param><sv:param name="catid" value="0"></sv:param></sv:widget>
+					</div>
+					<div class="six columns">
+						<h4 class="rock-salt">Deals/Packages</h4>
+						<sv:widget type="coupons" width="100" height="100"><sv:param name="action" value="showrandom"></sv:param><sv:param name="randomnum" value="__49__48"></sv:param><sv:param name="catFilter" value="1"></sv:param><sv:param name="catid" value="4"></sv:param><sv:param name="listingcatid" value="1"></sv:param><sv:param name="packagedeals" value="__78"></sv:param></sv:widget>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="twelve columns">
+					</div>
+				</div>
 			</div>
-			<div class="six columns">
+			<div class="three columns end">
+				<script src="http://arestravel.com/js/_default/ARESbot.js?bundle=ashevillecvb&nc=1&tpl=widget" type="text/javascript"></script>
+				<img width="100" height="100" title="action:'__115__105__103__110__117__112__87__105__100__103__101__116',msg:'__70__82__69__69__32__84__82__65__86__69__76__32__73__78__70__79__82__77__65__84__73__79__78',guideurl:'__104__116__116__112__58__47__47__119__119__119__46__101__120__112__108__111__114__101__97__115__104__101__118__105__108__108__101__46__99__111__109__47__97__98__111__117__116__45__97__115__104__101__118__105__108__108__101__47__114__101__113__117__101__115__116__45__116__114__97__118__101__108__45__103__117__105__100__101__47',newsletterurl:'__104__116__116__112__58__47__47__119__119__119__46__101__120__112__108__111__114__101__97__115__104__101__118__105__108__108__101__46__99__111__109__47__97__98__111__117__116__45__97__115__104__101__118__105__108__108__101__47__101__110__101__119__115__45__115__105__103__110__117__112__47',src:'__104__116__116__112__58__47__47__119__119__119__46__101__120__112__108__111__114__101__97__115__104__101__118__105__108__108__101__46__99__111__109__47__105__110__99__108__117__100__101__115__47__105__109__97__103__101__115__47__84__71__45__99__117__116__111__117__116__46__112__110__103'" alt="newslettersignup" class="mceItemNewsletterSignup" style="width: 100px; height: 100px" />
 			</div>
-		</div>
-
-		<br class="clear" />
-		
-		<div class="row">
-			<div class="twelve columns">
-			</div>
-		</div>
-
 	</div>
 </div>
