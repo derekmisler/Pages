@@ -1,59 +1,47 @@
 <meta name="robots" content="none">
-<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Rock+Salt' rel='stylesheet' type='text/css'>
 <style>
-	#l-mainContent > h3,
-	.evnt-listing-content p,
-	.evnt-content .socialMediaIcons,
-	.evnt-listing .linksHolder,
-	.evnt-listing .linksHolder li,
-	.filterHolder,
-	.evnt-content .detail,
-	#eventLayoutBuyTicketButton,
-	.evnt-listing .listingImage {
-		display: none !important;
-	}
-	#l-mainContent,
+	#events,
 	#packages {
-		height: 340px !important;
+		height: 350px !important;
 		overflow-y: scroll !important;
-		padding: 1rem 0 !important;
-/*		box-shadow: inset 0 -1px 5px -3px rgba(0,0,0,1), inset 0 1px 5px -3px rgba(0,0,0,1);*/
-		border-top: 1px solid rgba(0, 0, 0, 0.25);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-		overflow-x: hidden !important;
+		padding: 1rem 0 0 0 !important;
 	}
-	#l-mainContent .evnt-listing,
-	#l-mainContent .evnt-content {
-		width: auto !important;
-		overflow: hidden !important;
-		border: none !important;
-		background: none !important;
-		box-shadow: none !important;
+	#events *,
+	#packages * {
+		font-family: 'Lato', sans-serif !important;
+		font-size: 14px !important;
+		line-height: 14px !important;
+		font-weight: 700 !important;
 	}
-	.evnt-listing-content {
-		padding: 0 !important;
+	#events li,
+	#packages li {
 	}
-	#l-mainContent .evnt-content h3 {
+	#events .event-dates {
+		width: 30% !important;
+		text-align: right !important;
+		font-weight: 700 !important;
+		text-transform: uppercase !important;
+		padding-left: 0 !important;
+		padding-right: !important;
+		font-size: 12px !important;
+	}
+	#events .event-name {
+		width: 70% !important;
+	}
+	#events .event-name a,
+	#packages .package-name a {
 		display: block !important;
-		float: right !important;
-		width: 75% !important;
+		color: #165788 !important;
 	}
-	#l-mainContent .evnt-content h3 a {
-		display: block !important;
+	#events .event-name a:hover,
+	#packages .package-name a:hover {
+		text-decoration: underline !important;
 	}
-	.evnt-listing-content ul li {
-		display: none !important;
+	#packages .package-name {
+		text-align: center !important;
 	}
-	.evnt-listing-content ul li.event-dates {
-		display: block !important;
-		float: left !important;
-		width: 25% !important;
-		line-height: 13px !important;
-	}
-	.evnt-listing ul, #packages li.dates .date strong {
-		line-height: 13px !important;
-	}
-	
+
 	#aresContent .numbers li {
 		width: 68px !important;
 	}
@@ -66,14 +54,24 @@
 		margin-bottom: 1rem !important;
 		line-height: 2 !important;
 		text-align: center !important;
+		letter-spacing: 4px !important;
+	}
+	.rock-salt.green {
+		color: #90986b !important;
+		letter-spacing: 2px !important;
 	}
 </style>
 <div>
 	<div class="container">
 		<div class="row">
-			<div class="seven columns centered">
-				<h1>Savor the Last Days of Summer in Asheville, NC</h1>
-				<p>With summer starting to wind down, it’s the perfect time to visit. Here in the gently rolling Appalachian mountains the temperatures are pleasant, making it ideal to enjoy the many outdoor adventures the Asheville area has to offer. Feel the wind in your hair as you wind along the renowned Blue Ridge Parkway, relaxing in the shadow of some of America’s highest peaks. Take in the mountain air while dining al fresco, enjoying the lively music of street buskers, or browsing amongst our many art galleries and one-of-a-kind boutiques.</p>
+			<div class="nine columns centered">
+				<h1 class="rock-salt">There's more to life<br>than the climb.</h1>
+				<p>Shed life’s layers and let the child inside you out to play. Feel the wind in your hair as you wind along the renowned Blue Ridge Parkway, relaxing in the shadow of some of America’s highest peaks. Take in the mountain air while dining al fresco, enjoying the lively music of street buskers, or browsing amongst our many art galleries and one-of-a-kind boutiques.</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="twelve columns centered">
 				<hr>
 			</div>
 		</div>
@@ -82,12 +80,59 @@
 			<div class="nine columns">
 				<div class="row">
 					<div class="six columns">
-						<h4 class="rock-salt">Upcoming Events</h4>
-						<sv:widget type="events" width="100" height="100"><sv:param name="action" value="showrandom"></sv:param><sv:param name="randomnum" value="20"></sv:param><sv:param name="catid" value="0"></sv:param></sv:widget>
+						<h4 class="rock-salt green">Upcoming Events</h4>
+						<ul id="events" class="block-grid two-up list-wrap">
+							<li class="event-dates">Aug 7</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=4279&parentID=1" title="View more event details">Downtown Asheville First Friday Art Walk</a></li>
+							<li class="event-dates">Aug 12&ndash;15</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=4264&parentID=1" title="View more event details">Laugh Your Asheville Off Comedy Festival</a></li>
+							<li class="event-dates">Aug 14&ndash;15</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=7787&parentID=1" title="View more event details">5Point Film Festival</a></li>
+							<li class="event-dates">Aug 15</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=7389&parentID=1" title="View more event details">Shindig on the Green</a></li>
+							<li class="event-dates">Aug 22</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=2195&parentID=1" title="View more event details">Hop Harvest Tour</a></li>
+							<li class="event-dates">Aug 22</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=3886&parentID=196" title="View more event details">Asheville Wine &amp; Food Festival Grand Tasting</a></li>
+							<li class="event-dates">Aug 30</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=6223&parentID=1" title="View more event details">Grand Fondo Asheville</a></li>
+							<li class="event-dates">Aug 30</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=2300&parentID=1" title="View more event details">OrganicFest 2015</a></li>
+							<li class="event-dates">Sep 4</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=6257&parentID=1" title="View more event details">Addison Farms Vineyard Wine Tasting</a></li>
+							<li class="event-dates">Sep 6</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=320" title="View more event details">Lexington Avenue Arts and Fun Festival</a></li>
+							<li class="event-dates">Sep 5, 19</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=5850&parentID=196" title="View more event details">Ooh La La Curiosity Market</a></li>
+							<li class="event-dates">Sep 11&ndash;13</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=4604&parentID=196" title="View more event details">Asheville Goombay Festival</a></li>
+							<li class="event-dates">Sep 18</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=6381&parentID=1211" title="View more event details">Downtown After 5</a></li>
+							<li class="event-dates">Sep 19</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=6535&parentID=1217" title="View more event details">Brewgrass Festival 2015</a></li>
+							<li class="event-dates">Sep 19</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=7717&parentID=196" title="View more event details">ASAP's 2015 Farm Tour</a></li>
+							<li class="event-dates">Sep 19</li>
+							<li class="event-name"><a href="http://www.exploreasheville.com/includes/events/index.cfm?action=displayDetail&eventid=4281&parentID=1217" title="View more event details">Art in Autumn</a></li>
+						</ul>
+						<p class="center"><a class="small green button" href="http://www.exploreasheville.com/things-to-do/events/">View all upcoming events</a></p>
 					</div>
 					<div class="six columns">
-						<h4 class="rock-salt">Deals/Packages</h4>
-						<sv:widget type="coupons" width="100" height="100"><sv:param name="action" value="showrandom"></sv:param><sv:param name="randomnum" value="__49__48"></sv:param><sv:param name="catFilter" value="1"></sv:param><sv:param name="catid" value="4"></sv:param><sv:param name="listingcatid" value="1"></sv:param><sv:param name="packagedeals" value="__78"></sv:param></sv:widget>
+						<h4 class="rock-salt green">Deals/Packages</h4>
+						<ul id="packages" class="block-grid one-up list-wrap">
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/biltmore-tickets/" title="Find deals and packages">Biltmore Tickets</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/romance/" title="Find deals and packages">Romance Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/outdoor/" title="Find deals and packages">Outdoor Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/seasonal/" title="Find deals and packages">Seasonal Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/family-fun/" title="Find deals and packages">Family Fun Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/spa/" title="Find deals and packages">Spa Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/girlfriend-getaway/" title="Find deals and packages">Girlfriend Getaway</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/culinary/" title="Find deals and packages">Culinary Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/cultural/" title="Find deals and packages">Cultural Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/golf-packages/" title="Find deals and packages">Golf Packages</a></li>
+							<li class="package-name"><a href="http://www.exploreasheville.com/packages-deals/special-deals-and-coupons/" title="Find deals and packages">Special Deals and Coupons</a></li>
+						</ul>
+						<p class="center"><a class="small green button" href="http://www.exploreasheville.com/packages-deals/packages/">More deals and packages</a></p>
 					</div>
 				</div>
 				
