@@ -1,0 +1,87 @@
+<!--DON'T DELETE BELOW THIS LINE-->
+<script type="text/javascript">
+var versaTag = {};
+versaTag.id = "1848";
+versaTag.sync = 0;
+versaTag.dispType = "js";
+versaTag.ptcl = "HTTP";
+versaTag.bsUrl = "bs.serving-sys.com/BurstingPipe";
+versaTag.activityParams = {
+"OrderID":"","Session":"","Value":"","productid":"","productinfo":"","Quantity":"","Stage":"Familiarization","Number of Nights":"","Price Value":""};
+versaTag.retargetParams = {};
+versaTag.dynamicRetargetParams = {};
+versaTag.conditionalParams = {};
+</script>
+<script src="http://ds.serving-sys.com/SemiCachedScripts/ebOneTag.js" id="ebOneTagUrlId" type="text/javascript">
+</script>
+<noscript>&amp;amp;lt;iframe src=&amp;amp;quot;http://bs.serving-sys.com/BurstingPipe?cn=ot&amp;amp;amp;amp;onetagid=1848&amp;amp;amp;amp;ns=1&amp;amp;amp;amp;activityValues=$$Value=[Value]&amp;amp;amp;amp;OrderID=[OrderID]&amp;amp;amp;amp;Session=[Session]&amp;amp;amp;amp;ProductID=[ProductID]&amp;amp;amp;amp;ProductInfo=[ProductInfo]&amp;amp;amp;amp;Quantity=[Quantity]&amp;amp;amp;amp;Stage=Familiarization&amp;amp;amp;amp;Number of Nights=&amp;amp;amp;amp;Price Value=$$&amp;amp;amp;amp;retargetingValues=$$$$&amp;amp;amp;amp;dynamicRetargetingValues=$$$$&amp;amp;amp;amp;acp=$$$$&amp;amp;amp;amp;&amp;amp;quot; style=&amp;amp;quot;display:none;width:0px;height:0px&amp;amp;quot;&amp;amp;gt;&amp;amp;lt;/iframe&amp;amp;gt;</noscript>
+<!--DON'T DELETE ABOVE THIS LINE-->
+<script type="text/javascript" language="javascript">
+String.prototype.trim = function() {
+return this.replace(/^\s+|\s+$/g, "");
+};
+function validate5()
+{
+var isValid = true;
+var errorString = "";
+var x = document.OptinForm5;
+if (x.UEmail.value.trim() == "")
+{
+errorString = errorString + "Email Address\n ";
+isValid = false;
+}
+else
+{
+if (x.UEmail.value.indexOf("@") == -1 || x.UEmail.value.indexOf(".") == -1)
+{
+errorString = errorString + " Valid Email Address\n";
+isValid = false;
+}
+}
+if (x.field7.value.trim() == "")
+{
+errorString = errorString + "Media Outlet\n" ;
+isValid = false;
+}
+if (x.field11.value.trim() == "")
+{
+errorString = errorString + "Phone Number\n" ;
+isValid = false;
+}
+if (x.field13.value.trim() == "")
+{
+errorString = errorString + "FirstName\n" ;
+isValid = false;
+}
+if (isValid == true)
+{
+document.getElementById("Optin5").style.display = "none";
+document.getElementById("thank-you").style.display = "block";
+return true;
+}
+else
+{
+alert("Following fields are required:\n\n"+ errorString);
+return false;
+}  
+}
+</script>
+<form id="Optin5" name="OptinForm5" method="post" action="http://click.bsftransmit7.com/OptIn.aspx?OptinFormID=5&amp;26241823=169" onsubmit="return validate5();">
+	<input type="hidden" name="OptinFormID" value="5" />
+	<input type="hidden" name="26241823" value="169" />
+	<div class="list-wrap">
+	<h3>Sign up for news releases</h3>
+	<h5>Name</h5>
+	<input type="text" class="firstname" name="field13" />
+	<h5>Email</h5>
+	<input type="text" class="emailaddress" name="UEmail" />
+	<h5>Media Outlet</h5>
+	<input type="text" class="outlet" name="field7" />
+	<h5>Phone Number</h5>
+	<input type="text" class="phonenumber" name="field11" />
+	<input class="small button expand" value="Sign Up!" name="submit" type="submit" onmousedown="_gaq.push(['pageTracker._trackEvent', 'Sidebar', 'eNews Signup Widget', window.location.pathname']);" onclick="setTimeout(function(){ versaTagObj.generateRequest('http://www.exploreasheville.com/pressroomsignupbutton'); }, 1000);" />
+	</div>
+</form>
+<div class="list-wrap" style="display: none" id="thank-you">
+<h3>Thanks!</h3>
+</div>
