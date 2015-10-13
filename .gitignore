@@ -2,33 +2,13 @@
 ## Other
 #################
 
-*.tif
-*.tiff
-*.psd
 *.raw
-*.ai
-*.indd
-*.zip
-*.doc
-*.docx
-*.xls
-*.xlsx
-*.pdf
-*.jpg
-*.JPG
-*.gif
-*.png
-*.qrcode
-*.lst
-*.ttf
-*.otf
 *.BridgeCache
 *.BridgeCacheT
 *.BridgeSort
 _notes
 dwsync.xml
 *.lnk
-*.eps
 *.idlk
 
 #################
