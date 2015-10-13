@@ -2,7 +2,10 @@
 ## Other
 #################
 
+<<<<<<< HEAD
 *.raw
+=======
+>>>>>>> origin/master
 *.BridgeCache
 *.BridgeCacheT
 *.BridgeSort
