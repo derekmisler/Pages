@@ -1,4 +1,8 @@
 @charset "utf-8";
+.body-section.no-slideshow{
+	padding: 0 !important;
+}
+}
 .row * {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -366,7 +370,7 @@ hr {
 }
 body {
 		background-color: #f9f9f9;
-		background-image: url(http://www.exploreasheville.com/includes/images/restaurant-week/brick-background.jpg);
+		background-image: url(http://res.cloudinary.com/simpleview/image/upload/v1445008530/clients/asheville/brickbackground_1ee1e95f-9fe5-4b1b-b70c-7ac06e6f79d5.jpg);
 		background-repeat: repeat;
 		font-family: 'Open Sans', sans-serif
 }
@@ -473,7 +477,7 @@ h2.chamber-logo {
 		height: 76px;
 		overflow: hidden;
 		text-indent: -9999999px;
-		background-image: url(http://www.exploreasheville.com/includes/images/restaurant-week/chamber-logo.png);
+		background-image: url(http://res.cloudinary.com/simpleview/image/upload/v1445008470/clients/asheville/chamberlogo_af40d34b-3c5c-47bf-a29c-400440941bfd.png);
 		background-repeat: no-repeat;
 		margin: 0 auto -25px
 }
@@ -604,30 +608,6 @@ ul.list-wrap {
 .restaurants a {
 		display: inline-block
 }
-.restaurants a[href*=opentable] {
-		padding: 0;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/Opentable.png) no-repeat -29px 50%
-}
-.restaurants a[href*=twitter] {
-		padding: 0;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/twitter-bird-light-bgs.png) no-repeat -21px 50%
-}
-.restaurants a[href*=facebook] {
-		padding: 0;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/f_logo.png) no-repeat -18px 50%
-}
-.restaurants a[href*=opentable]:hover {
-		padding: 0 0 0 29px;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/Opentable.png) no-repeat 0 50%
-}
-.restaurants a[href*=twitter]:hover {
-		padding: 0 0 0 21px;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/twitter-bird-light-bgs.png) no-repeat 0 50%
-}
-.restaurants a[href*=facebook]:hover {
-		padding: 0 0 0 18px;
-		background: url(http://www.exploreasheville.com/includes/images/restaurant-week/f_logo.png) no-repeat 0 50%
-}
 .sponsors {
 		border-left: 1px solid #ccc
 }
@@ -704,7 +684,6 @@ ul.list-wrap {
 		height: 30x;
 		font-weight: 700;
 		color: #37424a!important;
-		background: url(http://www.exploreasheville.com/includes/images/assets/back-to-top.png) no-repeat 0 50%
 }
 #tabsWrap, #tabsWrap *{
 	-webkit-box-sizing: content-box !important;
