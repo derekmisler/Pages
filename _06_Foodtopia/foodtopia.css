@@ -1,0 +1,19 @@
+.content .title a,
+.nav-primary .secondaryItem a,
+.news-title,
+.vguide .title,
+.nav-grid .item .link,
+h1,
+h2,
+h3 {
+	font-family: 'Caslon W01 Antique' !important;
+	font-weight: 400 !important;
+}
+
+.nav-primary .secondaryItem a {
+	font-size: 18px !important;
+}
+.nav-grid .item .link {
+	color: #615951 !important;
+	font-size: 30px !important;
+}
