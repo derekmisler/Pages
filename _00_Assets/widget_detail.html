@@ -1,0 +1,218 @@
+<!--SVMETA
+{
+	"requireBundles" : [
+		"plugins_events_shared", 
+		"plugins_common_custom_detail", 
+		"plugins_common_custom_map", 
+		"plugins_common_custom_themes", 
+		"plugins_common_custom_shadowbox",
+		"site_slick"
+	], "partials" : [
+		{ "plugin" : "common", "name" : "custom_info_window" },
+		{ "plugin" : "events", "name" : "custom_detail_gallery" }
+	]
+}
+-->
+
+<!--////////////////  data fixes   ///////////////-->
+{{~exec(function() { 
+	helpers.var.bookurl = "";
+	helpers.var.hasSocial = false;
+
+	if (data.udfs !== undefined) {
+		data.udfs.forEach(function(obj) {
+			if (obj.fieldid == 580 && obj.value.length > 0) {
+				helpers.var.facebook = obj.value; 
+				helpers.var.hasSocial = true;
+			} else if (obj.fieldid == 581 && obj.value.length > 0) {
+				helpers.var.twitter = obj.value; 
+				helpers.var.hasSocial = true;
+			} else if (obj.fieldid == 582 && obj.value.length > 0) {
+				helpers.var.bookurl = obj.value;
+			} 
+		});
+	}
+})}}
+
+<div id="eventDetails_{{guid}}" class="eventsDetailContainer custom_detail blue">
+	<script type="text/template" data-sv-infoWindowTemplate>{{~partial("custom_info_window")}}</script>
+	<script type="text/template" data-sv-galleryTemplate>
+		{{~partial("custom_detail_gallery")}}
+	</script>
+
+	<a class="listingLayout" href="javascript:history.go(-1);">&laquo; Back</a>
+	<div class="item item_{{@row}} row" data-recid="{{recid}}" data-type="event" itemscope itemtype="http://data-vocabulary.org/Event">
+		<meta itemprop="summary" content="{{%title}}" />
+		<div class="columns small 12"><h4>{{title}}</h4></div>
+		<div class="columns small-12 medium-9">
+			<div class="detailcontent{{:~var.hassocial}} social-right{{/~var.hassocial}}">		
+				<div class="subtitle">
+				<time itemprop="startDate" datetime="{{startDateMoment.format('YYYY-MM-DD')}}">{{startDateMoment.format('MMMM DD, YYYY')}}</time>
+				{{:endDateMoment}}
+				-
+				<time itemprop="endDate" datetime="{{endDateMoment.format('YYYY-MM-DD')}}">{{endDateMoment.format('MMMM DD, YYYY')}}</time>
+				{{/endDateMoment}}					
+				</div>					
+				<ul class="lines">
+					<span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization">
+						{{:location}}<li class="location"><h2 itemprop="name">{{:linkurl}}<a class="theme-color" href="{{linkurl}}" target="_blank" data-seo-venue>{{location}}</a>{{/linkurl}}{{!linkurl}}{{location}}{{/linkurl}}</h2></li>{{/location}}
+						<li itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><strong>Address: </strong><span itemprop="street-address">{{address1}}{{:address2}}, {{address2}}{{/address2}}</span>, <span itemprop="locality">{{city}}</span>, <span itemprop="region">{{state}}</span> {{zip}}</li>
+					</span>
+					
+					{{:times}}<li><strong>Times: </strong>{{times}}</li>{{/times}}
+					{{:admission}}<li><strong>Admission: </strong>{{admission}}</li>{{/admission}}
+					{{:contact}}<li><strong>Contact: </strong>{{contact}}</li>{{/contact}}
+					{{:phone}}<li><strong>Phone: </strong>{{phone}}</li>{{/phone}}
+					{{:email}}<li><strong>Email: </strong><a class="theme-color" href="mailto:{{email}}" data-seo-email>{{email}}</a></li>{{/email}}
+				</ul>
+				{{:~var.bookurl}}
+				<div class="buttons red">
+					<a class="theme-small" href="{{~var.bookurl}}" target="_blank" data-seo-tickets>Buy Tickets</a>
+				</div>
+				{{/~var.bookurl}}
+				<ul class="links">
+					{{:linkurl}}
+					<li><a class="theme-color" href="{{linkurl}}" target="_blank" data-seo-website>Visit Event Website</a></li>
+					<li class="sep">|</li>
+					{{/linkurl}}
+					{{:listing.detailUrl}}
+					<li><a class="theme-color" href="{{listing.detailUrl}}" data-seo-venue>View Venue Details</a></li>
+					<li class="sep">|</li>
+					{{/listing.detailUrl}}
+					<li class="tripButtonContainer" data-tb-button data-tb-recid="{{recid}}" data-tb-type="event"></li>
+				</ul>
+				{{:~var.hassocial}}
+				<div class="socialbar">
+					<ul class="social">
+					{{:~var.facebook}}
+						<li><a data-sv-social data-sv-service="facebook" href="{{~var.facebook}}" target="_blank" data-seo-facebook><span class="fa-stack facebook"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
+					{{/~var.facebook}}
+					{{:~var.twitter}}
+						<li><a data-sv-social data-sv-service="twitter" href="{{~var.twitter}}" target="_blank" data-seo-twitter><span class="fa-stack twitter"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+					{{/~var.twitter}}
+					</ul>
+				</div>
+				{{/~var.hassocial}}	
+				{{:description}}
+				<p>{{description}}</p>
+				{{/description}}
+			</div>			
+		</div>
+		<div class="columns small-12 medium-3">
+			<div class="mediaGallery"></div>
+		</div>		
+	</div>
+	<ul class="detailmap mapTabs">
+		<li>Map View</li>
+		<li class="sep">|</li>
+		<li><a data-street-view-link href="javascript:void(0);">Street View</a></li>
+		{{:listing}}
+			<li class="sep">|</li>
+			<li><a href="/mapexplorer/?action=nearby&recid={{listing.recid}}" target="_blank" data-seo-nearby>What's Nearby</a></li>			
+		{{/listing}}
+	</ul>
+	<div class="gMapContainer" data-gMapContainer>
+		<div class="gMapHolder" data-mapHolder></div>
+	</div>
+</div>
+
+<script>
+	require([
+		"jquery", 
+		"slick", 
+		"async",
+		"plugins_common_custom_map",
+		"plugins_common_custom_seotracker",
+		"plugins_common_custom_socialurls",
+		"sv_goatee!plugins=clientMoment,stringLib", 
+		"sv_cloudinaryLib", 
+		"plugins_common_custom_shadowbox",
+		"sv_load!site_tripbuilder", 
+		"domReady!"
+	], function($, slick, async, mapObj, seotracker, social, goatee, sv_cloudinaryLib, sb, tripbuilder) {
+		var root = $("#eventDetails_{{guid}}");
+		var eventData = {{~exec(function() { return JSON.stringify(data); })}};
+		eventData.media = {{~exec(function() {
+			return data.media !== undefined ? JSON.stringify(data.media) : {};
+		})}};
+		var galleryTemplate = root.find("[data-sv-galleryTemplate]").html();
+		var infoWindowTmpl = $("[data-sv-infoWindowTemplate]").html();
+
+		/*** Media Gallery ***/
+		if (eventData.media !== undefined) {
+			var newMediaObject = [];
+			eventData.media.forEach(function(val, i) {
+				// hack to recreate this into a cloudinary object as stringify doesn't pass all this through.
+				// this also allows us to keep it compatible with listings in the detail gallery template.
+				newMediaObject.push({ image: sv_cloudinaryLib.default.createResource({ imageUrl : val._imageUrl }) });
+			});
+
+			var galleryHTML = goatee.fill(galleryTemplate, { media : newMediaObject });
+			root.find(".mediaGallery").html(galleryHTML);
+
+			root.find(".mediaGallery .slider").slick({
+				dots : true,
+				fade : true,
+				arrows : false,
+				infinite : false,
+				appendDots : root.find(".gallery-dots")
+			});
+		}
+		
+		// validate and social urls
+		root.find("[data-sv-social]").each(function() {
+			var validServices =['facebook', 'twitter', 'flickr', 'youtube', 'pinterest'];
+			var service = $(this).data('svService').toLowerCase();
+			var href = $(this).attr('href');
+
+			if (validServices.indexOf(service) > -1) {
+				href = social.getValidSocialUrl({	url : href, urlType : service });
+				$(this).attr("href", href);
+			}
+		});
+
+		/*** Begin Maps ***/
+		if (eventData.latitude && eventData.longitude) {
+
+			var placemarks = [{
+				id : "event_" + eventData.recId,
+				marker : {
+					position : [eventData.latitude, eventData.longitude]
+				},
+				infoWindow : {
+					content : goatee.fill(infoWindowTmpl, eventData),
+					maxWidth : 640
+				}
+			}];
+
+			Shadowbox.init();
+			mapObj.init({
+				open : true,
+				placemarks : placemarks,
+				options : { node: root }
+			});
+			mapObj.initDetailInterface();
+			mapObj.renderMap();
+		}
+		
+		if (tripbuilder !== undefined) {
+			tripbuilder.initButtons({ 
+				root : root,
+				addButtonTemplate: "<a href='#' data-tb-add class='tripAdd theme-color' data-seo-add-to-trip>Add to Trip Planner</a>",
+				removeButtonTemplate: "<a href='"+ tripbuilder.path +"' data-tb-view class='tripView theme-color'>View Trip</a>"
+			});
+		}
+
+		//add tracking
+		var seocat = "Events";
+		var seolabel = '{{:listing}}{{%listing.title}} | {{/listing}}{{%title}}';
+		root.find("[data-seo-website]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Visit Website", label: seolabel }));		
+		root.find("[data-seo-venue]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Link to Venue", label: seolabel }));
+		root.find("[data-seo-add-to-trip]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Add to Trip", label: seolabel }));		
+		root.find("[data-seo-email]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Email", label: seolabel }));
+		root.find("[data-seo-facebook]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Link to Facebook", label: seolabel }));
+		root.find("[data-seo-twitter]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Link to Twitter", label: seolabel }));
+		root.find("[data-seo-tickets]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "Buy Tickets", label: seolabel }));
+		root.find("[data-seo-nearby]").attr("onclick", seotracker.addEvent({ wrap: false, category: seocat, action: "What\'s Nearby", label: seolabel }));
+	});
+</script>
