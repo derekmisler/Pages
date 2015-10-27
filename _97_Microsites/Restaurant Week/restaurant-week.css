@@ -1,7 +1,6 @@
-@charset "utf-8";
-.body-section.no-slideshow{
-padding: 0 !important;
-}
+.body-section{
+	padding: 0 !important;
+	margin-top: -1rem; !important;
 }
 body,
 html {
@@ -28,6 +27,7 @@ body {
 }
 .row {
 	background-color: #f9f9f9!important;
+	max-width: 62.5rem !important;
 }
 .button,
 h1,
@@ -188,8 +188,10 @@ p.intro {
 	display: block;
 	position: fixed;
 	bottom: 0;
+	left: 0;
+	right: 0;
 	margin: 0;
-	padding: 0;
+	padding: 10px 0;
 	-webkit-border-radius: 4px 4px 0 0;
 	border-radius: 4px 4px 0 0;
 	background-color: #fff!important;
@@ -201,36 +203,39 @@ p.intro {
 	z-index: 999;
 }
 #social-links ul {
-	float: right;
-	margin: 0
+	width: 62.5rem;
+	margin: 0 auto;
 }
 #social-links ul li {
 	margin: 0;
-	padding: 10px 10px 8px 0;
+	padding: 0;
 	display: block;
 	float: left;
-	width: 85px;
-	height: 40px;
-	line-height: 0
+	height: auto;
+	line-height: 0;
 }
 #social-links ul li:first-of-type {
 	width: auto;
-	margin-right: 20px
+	margin-right: 20px;
+}
+#social-links ul li h5 {
+	margin: 0;
 }
 #social-links ul li a {
 	-webkit-transition: none;
 	-moz-transition: none;
 	-ms-transition: none;
 	-o-transition: none;
-	transition: none
+	transition: none;
 }
-#social-links ul li.pinterest {
-	width: 80px
+#social-links ul li.pinterest,
+#social-links ul li.google-plus {
+	width: 80px;
 }
 #social-links ul li.google-plus {
-	width: 70px
+	margin-top: -10px;
 }
 #social-links ul li.facebook,
 #social-links ul li.twitter {
-	width: 100px
+	width: 105px;
 }
