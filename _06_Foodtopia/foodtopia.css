@@ -10,6 +10,12 @@ h3 {
 	font-weight: 400 !important;
 }
 
+
+.page-intro h1::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445988141/clients/asheville/h1left_78d549a6-0452-4982-8dfe-c2767c10bdc7.png");}
+.page-intro h1::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445988167/clients/asheville/h1right_b3e8a041-9db0-4193-9dbe-bf2be36c9d43.png");}
+
+
+
 .nav-primary .secondaryItem a {
 	font-size: 18px !important;
 }
@@ -17,3 +23,25 @@ h3 {
 	color: #615951 !important;
 	font-size: 30px !important;
 }
+
+.blue .title-arrow::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989039/clients/asheville/blueleft_e846610f-fc69-4405-aba0-ed522b14b4d5.png");}
+.blue .title-arrow::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989050/clients/asheville/blueright_203fd99b-7806-474d-a181-09fc958d997e.png");}
+
+.brown .title-arrow::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989059/clients/asheville/brownleft_4a52dc77-817e-466b-aabb-3acc167c38f9.png");}
+.brown .title-arrow::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989070/clients/asheville/brownright_9a04ad18-7c17-4a7f-8b80-39f26ec9782e.png");}
+
+.green .title-arrow::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989081/clients/asheville/greenleft_7cfd116e-9a8c-4c44-9e32-bebd60619514.png");}
+.green .title-arrow::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989090/clients/asheville/greenright_df3a2b68-c2d3-46c4-b703-50f8930cbfff.png");}
+
+.red .title-arrow::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989101/clients/asheville/redleft_768d89c1-9938-4385-80f2-f8ec448dded4.png");}
+.red .title-arrow::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989110/clients/asheville/redright_fd68a5fd-0b2f-46f2-8fdf-cb3443d4a01a.png");}
+
+.yellow .title-arrow::before {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989120/clients/asheville/yellowleft_68891e55-aa67-494d-a4ff-2a5696caa848.png");}
+.yellow .title-arrow::after {content: url("http://res.cloudinary.com/simpleview/image/upload/v1445989130/clients/asheville/yellowright_ad7ed0b8-270f-456c-941d-38cdc005874b.png");}
+
+
+.blue .theme-small-arrow {background: url("http://res.cloudinary.com/simpleview/image/upload/v1445988486/clients/asheville/bluearrow_4d16f1db-6dbf-47ba-93f2-87c8b4b5728f.png") no-repeat;}
+.brown .theme-small-arrow {background: url("http://res.cloudinary.com/simpleview/image/upload/v1445988517/clients/asheville/brownarrow_1c78ff6d-7230-4597-90d9-29dca3e14ae1.png") no-repeat;}
+.green .theme-small-arrow {background: url("http://res.cloudinary.com/simpleview/image/upload/v1445988546/clients/asheville/greenarrow_cf26b2b0-e429-41ff-9f36-f288484ba4af.png") no-repeat;}
+.red .theme-small-arrow {background: url("http://res.cloudinary.com/simpleview/image/upload/v1445988574/clients/asheville/redarrow_9a01c3fc-4a4b-4146-aea1-09c1a0628b20.png") no-repeat;}
+.yellow .theme-small-arrow {background: url("http://res.cloudinary.com/simpleview/image/upload/v1445988602/clients/asheville/yellowarrow_9099b5b7-e5fb-43d2-8a67-480b079ee239.png") no-repeat;}
