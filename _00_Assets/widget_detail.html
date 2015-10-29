@@ -42,7 +42,7 @@
 
 	<a class="listingLayout" href="javascript:history.go(-1);">&laquo; Back</a>
 	<div class="item item_{{@row}} row" data-recid="{{recid}}" data-type="event" itemscope itemtype="http://data-vocabulary.org/Event">
-		<meta itemprop="summary" content="{{%title}}" />
+		<meta itemprop="name" content="{{%title}}" />
 		<div class="columns small 12"><h4>{{title}}</h4></div>
 		<div class="columns small-12 medium-9">
 			<div class="detailcontent{{:~var.hassocial}} social-right{{/~var.hassocial}}">		
@@ -94,7 +94,7 @@
 				</div>
 				{{/~var.hassocial}}	
 				{{:description}}
-				<p>{{description}}</p>
+				<span itemprop="summary">{{description}}</span>
 				{{/description}}
 			</div>			
 		</div>
