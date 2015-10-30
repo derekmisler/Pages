@@ -15,11 +15,11 @@
 					<a href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}">{{data.title}}</a>
 					{{:shownchildren}}
 					<div class="nav-secondary">
-						<div class="secondary-cont" vocab="http://schema.org/" typeof="BreadcrumbList">
+						<div class="secondary-cont" itemscope itemtype="http://schema.org/BreadcrumbList">
 						{{#shownchildren}}
-							<div class="secondaryItem{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}" data-menuid="{{data.id}}" property="itemListElement" typeof="ListItem">
-								<a property="item" typeof="WebPage" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span property="name">{{data.title}}</span></a>
-								<meta property="position" content="2" />
+							<div class="secondaryItem{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}" data-menuid="{{data.id}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
+								<meta itemprop="position" content="2" />
 								{{:shownchildren}}
 								<div class="dropdown">
 									{{#shownchildren}}
