@@ -7,26 +7,24 @@
 {{~setVar("cleantitle", function(input) { return helpers.plugins.stringLib.stripHtml(input); })}}
 
 {{#section}}
-<div class="large-10 large-offset-2 columns main-cont show-for-large-up" itemscope itemtype="http://schema.org/WebPage">
+<div class="large-10 large-offset-2 columns main-cont show-for-large-up">
 	<nav>
-		<div class="nav-primary" itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+		<div class="nav-primary">
 			{{#shownchildren}}
-				<div itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" class="item{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}{{:@first}} first{{/@first}}{{:@last}} last{{/@last}}" data-menuid="{{data.id}}">
-					<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
-					<meta itemprop="position" content="1" />
+				<div class="item{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}{{:@first}} first{{/@first}}{{:@last}} last{{/@last}}" data-menuid="{{data.id}}">
+					<a href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}">{{data.title}}</a>
 					{{:shownchildren}}
 					<div class="nav-secondary">
-						<div class="secondary-cont">
+						<div class="secondary-cont" vocab="http://schema.org/" typeof="BreadcrumbList">
 						{{#shownchildren}}
-							<div class="secondaryItem{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}" data-menuid="{{data.id}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-								<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
-								<meta itemprop="position" content="2" />
+							<div class="secondaryItem{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}" data-menuid="{{data.id}}" property="itemListElement" typeof="ListItem">
+								<a property="item" typeof="WebPage" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span property="name">{{data.title}}</span></a>
+								<meta property="position" content="2" />
 								{{:shownchildren}}
 								<div class="dropdown">
 									{{#shownchildren}}
-									<div class="dropdownItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-										<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
-										<meta itemprop="position" content="3" />
+									<div class="dropdownItem">
+										<a href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}">{{data.title}}</a>
 									</div>
 									{{/shownchildren}}
 								</div>
