@@ -1,0 +1,102 @@
+<!--SVMETA
+{
+	"requireBundles" : ["plugins_nav_shared"]
+}
+-->
+
+{{~setVar("cleantitle", function(input) { return helpers.plugins.stringLib.stripHtml(input); })}}
+
+{{#section}}
+<div class="large-10 large-offset-2 columns main-cont show-for-large-up">
+	<nav itemscope itemtype="http://schema.org/BreadcrumbList">
+		<div class="nav-primary">
+			{{#shownchildren}}
+				<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}{{:@first}} first{{/@first}}{{:@last}} last{{/@last}}" data-menuid="{{data.id}}">
+					<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
+					<meta itemprop="position" content="1" />
+					{{:shownchildren}}
+					<div class="nav-secondary">				
+						<div class="secondary-cont">									
+						{{#shownchildren}}
+							<div class="secondaryItem{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}" data-menuid="{{data.id}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
+								<meta itemprop="position" content="2" />
+								{{:shownchildren}}
+								<div class="dropdown">
+									{{#shownchildren}}
+									<div class="dropdownItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+										<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
+										<meta itemprop="position" content="3" />
+									</div>
+									{{/shownchildren}}
+								</div>
+								{{/shownchildren}}
+							</div>
+						{{/shownchildren}}
+						</div>
+					</div>
+					{{/shownchildren}}
+					<div class="featuredContent clearfix">
+						<div class="featuredContent-cont clearfix">
+							<div class="dropWidgets" id="topnav-{{@row}}"></div>
+						</div>
+					</div>					
+				</div>
+			{{/shownchildren}}
+		</div>
+	</nav>
+</div>
+{{/section}}
+
+<!-- mobile -->
+{{+submenu}}
+	{{:shownchildren}}
+		<ul class="dl-submenu">
+			{{#shownchildren}}
+				<li class="{{:shownchildren}}has-submenu{{/shownchildren}}">
+					<a href="{{href}}">{{data.title}}</a>
+					{{>submenu}}
+				</li>
+			{{/shownchildren}}
+		</ul>
+	{{/shownchildren}}
+{{/submenu}}
+
+<div class="mobilenav hide-for-large-up">
+	<div class="mobile-logo"><a href="/"><img src="/includes/public/assets/images/logo-header-mobile.png" /></a></div>
+	<div id="dl-menu" data-sv-dl-menu class="dl-menuwrapper">
+		<button class="dl-trigger menu-icon" menu-icon>
+			<a href="#"><i class="fa fa-bars"></i></a>
+		</button>
+		{{#section}}
+		<ul class="dl-menu" data-sv-mainnav>
+			<div class="site-search-dd" data-sv-ssdd></div>
+			<div class="mobile-extra clearfix">
+				<div class="tb-mobile left" id="tripbuilder_counter_mobile"><a href="/trip-builder/">Trip Builder <span class="itin-count">(0)</span></a></div>
+				<div class="email-mobile right"><a href="#"><img src="/includes/public/assets/images/email-icon-mobile.png" /></a></div>
+				<div class="print-mobile right"><a href="javascript:window.print();"><img src="/includes/public/assets/images/print-icon-mobile.png" /></a></div>				
+			</div>
+			{{#shownchildren}}
+				<li class="item-main{{:shownchildren}} has-submenu{{/shownchildren}}">
+					<a href="{{href}}">{{~exec(data.data.title.replace('<br>',' '))}} <i class="fa fa-angle-right"></i></a>
+						{{>submenu}}
+				</li>
+			{{/shownchildren}}
+		</ul>
+		<div class="clear"></div>
+		{{/section}}
+	</div>
+</div>
+
+<script type="text/javascript">
+	require(["jquery", "sv_siteFoundation"], function($) {	
+
+		var snav = $('[data-sv-industrynav]').html(); 
+		$('[data-sv-mainnav]').append(snav);
+
+		var searchmobile = $('[data-sv-header-searchbox]').html();
+		$('[data-sv-ssdd]').append(searchmobile);
+
+		$('[data-sv-mainnav]').find("a").filter(function(){ return this.attributes.href.value == window.location.pathname; }).addClass('sel')
+	});
+</script>
