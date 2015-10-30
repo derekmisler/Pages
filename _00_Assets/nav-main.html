@@ -7,11 +7,11 @@
 {{~setVar("cleantitle", function(input) { return helpers.plugins.stringLib.stripHtml(input); })}}
 
 {{#section}}
-<div class="large-10 large-offset-2 columns main-cont show-for-large-up">
-	<nav itemscope itemtype="http://schema.org/BreadcrumbList">
-		<div class="nav-primary">
+<div class="large-10 large-offset-2 columns main-cont show-for-large-up" itemscope itemtype="http://schema.org/WebPage">
+	<nav>
+		<div class="nav-primary" itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 			{{#shownchildren}}
-				<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}{{:@first}} first{{/@first}}{{:@last}} last{{/@last}}" data-menuid="{{data.id}}">
+				<div itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" class="item{{:isopen}} open{{/isopen}}{{:iscurrent}} selected{{/iscurrent}}{{:@first}} first{{/@first}}{{:@last}} last{{/@last}}" data-menuid="{{data.id}}">
 					<a itemprop="item" href="{{href}}" target="{{data.target}}" title="{{~var.cleantitle(data.data.title)}}"><span itemprop="name">{{data.title}}</span></a>
 					<meta itemprop="position" content="1" />
 					{{:shownchildren}}
