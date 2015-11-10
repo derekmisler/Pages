@@ -1,0 +1,45 @@
+@asheville-blue:#165788;
+@asheville-red:#981e32;
+@sv-red:#b71234;
+@asheville-grey:#766a65;
+@asheville-dark-grey:#37424a;
+@asheville-green:#90986b;
+@asheville-yellow:#eeaf30;
+@header-font:"Open Sans Condensed", Helvetica, Arial, Verdana;
+@body-font:"Open Sans", Verdana, sans-serif;
+@body-font-color:#16161D;
+@base-font-size:16px;
+@base-line-height:1.6em;
+@border-color:#AEAEA6;
+@background-color:#efefe0;
+
+.border-radius{
+	-webkit-border-radius: 2px;
+		 -moz-border-radius: 2px;
+				border-radius: 2px;
+}
+.box-shadow{
+	-webkit-box-shadow:0 4px 2px -4px rgba(0, 0, 0, 0.3), inset 0px 0 40px rgba(0, 0, 0, 0.05);
+	   -moz-box-shadow:0 4px 2px -4px rgba(0, 0, 0, 0.3), inset 0px 0 40px rgba(0, 0, 0, 0.05);
+			box-shadow:0 4px 2px -4px rgba(0, 0, 0, 0.3), inset 0px 0 40px rgba(0, 0, 0, 0.05);
+}
+.panel{
+	overflow:hidden;
+	padding:@base-line-height;
+	.border-radius;
+	.box-shadow;
+	background-color:@background-color;
+	border:1px solid @border-color;
+}
+.inverted-panel{
+	overflow:hidden;
+	padding:@base-line-height;
+	background-color:lighten(@background-color, 5%);
+	border:1px solid @border-color;
+}
+.panel > :first-child, .inverted-panel > :first-child {
+	margin-top: 0;
+}
+.panel > :last-child, .inverted-panel > :last-child {
+	margin-bottom: 0;
+}

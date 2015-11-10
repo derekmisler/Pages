@@ -1,0 +1,306 @@
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  direction: ltr; }
+
+/* Default Link Styles */
+a {
+  color: @sv-red;
+  text-decoration: none;
+  line-height: inherit; }
+  a:hover, a:focus {
+    color: @asheville-red; }
+  a img {
+    border: none; }
+
+/* Default paragraph styles */
+p {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: @base-font-size;
+    line-height: @base-line-height;
+    margin-bottom: floor(@base-line-height / 2);
+    .antialiased;
+    color:@body-font-color;
+}
+p aside {
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6, .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .button, .override {
+    font-family: @header-font;
+    font-weight: bold;
+    font-style: normal;
+    color: @asheville-blue;
+    display:block;
+    .antialiased;
+    text-transform:uppercase;
+    line-height: 1; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .override small {
+    font-size: 60%;
+    line-height: 1; }
+
+h1 {
+  font-size: 2.125em;
+}
+h2 {
+  font-size: 1.6875em;
+}
+h2.date-header{
+    display:none !important;
+}
+h3, .override {
+  font-size: 1.375em; }
+.override{
+    display:inline;
+}
+h4 {
+  font-size: 1.125em; }
+
+h5, .widget h2:not(.post-title) {
+  font-size: 1.125em; }
+
+h6 {
+  font-size: 1em; }
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #58111d; }
+
+a{
+	color:@sv-red;
+	text-decoration:none;
+}
+a:hover{
+	color:@asheville-red;
+}
+hr {
+	display: block;
+	height: 50px;
+	background: url(http://www.exploreasheville.com/includes/images/assets/hr-summer.png) center center no-repeat;
+	clear: both;
+	color: transparent;
+	border: 0 none #FFFFFF !important;
+	outline: none !important;
+	margin: 0;
+}
+.noPoints-block-inline {
+	display: block;
+	list-style-type: none !important;
+	margin:0;
+	padding: 0; 
+}
+.noPoints-block-inline li{
+	display: inline-block;
+	list-style-type: none;
+	margin:0;
+	padding: 0; 
+}
+.img-right, .img-left {
+    display:block;
+    float:right;
+    margin-left:1em;
+    clear:right;
+    margin-top:.5em;
+}
+.img-left {
+    float:left;
+    margin-right:1em;
+    clear:left;
+    margin-left:0;
+		margin-top:0;
+}
+.txt-right {text-align:right;}
+
+::selection{
+	background-color:@sv-red;
+	color:#ffffff;
+}
+::-moz-selection {
+	background-color:@sv-red;
+	color:#ffffff;
+}
+
+p.notice, p.success, p.info, p.error{
+    display: block;
+	.border-radius;
+	.box-shadow;
+    font-size: 13px !important;
+    padding: 10px 10px 10px 40px !important;
+	text-shadow:1px 1px 0 rgba(255,255,255,.3);
+}
+p.notice {
+    background: #ffd557 url(http://facebook.exploreasheville.com/images/icon_notice.png) no-repeat 13px 10px;
+    border: 1px solid #d2ae43;
+    color: #55481f;
+	-webkit-box-shadow: inset 0 0 0px 1px rgba(255,255,255,.5), 0 0 1px 0px rgba(0, 0, 0, .2);
+	   -moz-box-shadow: inset 0 0 0px 1px rgba(255,255,255,.5), 0 0 1px 0px rgba(0, 0, 0, .2);
+			box-shadow: inset 0 0 0px 1px rgba(255,255,255,.5), 0 0 1px 0px rgba(0, 0, 0, .2);
+}
+
+p.success {
+    background: #96df73 url(http://facebook.exploreasheville.com/images/icon_success.png) no-repeat 10px 11px;
+    border: 1px solid #82b968;
+    color: #3a6028;
+}
+
+p.info {
+    background: #acdae2 url(http://facebook.exploreasheville.com/images/icon_info.png) no-repeat 11px 9px;
+    border: 1px solid #89b7bf;
+    color: #394e52;
+}
+
+p.error {
+    background: #ef403d url(http://facebook.exploreasheville.com/images/icon_error.png) no-repeat 10px 11px;
+    border: 1px solid #b32b29;
+    color: #323232;
+}
+
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  list-style-position: outside;
+  font-family: inherit; }
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+  font-size: 1em;
+  /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+ul.square {
+  list-style-type: square; }
+ul.circle {
+  list-style-type: circle; }
+ul.disc {
+  list-style-type: disc; }
+ul.no-bullet {
+  list-style: none; }
+
+/* Ordered Lists */
+ol li ul,
+ol li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt {
+  margin-bottom: 0.3em;
+  font-weight: bold; }
+dl dd {
+  margin-bottom: 0.75em; }
+
+/* Abbreviations */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #0a1528;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help; }
+
+abbr {
+  text-transform: none; }
+
+/* Blockquotes */
+blockquote {
+  margin: 0 0 1.25em;
+  padding: 0.5625em 1.25em 0 1.1875em;
+  border-left: 1px solid #dddddd; }
+  blockquote cite {
+    display: block;
+    font-size: 0.8125em;
+    color: #288fdc; }
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+    blockquote cite a,
+    blockquote cite a:visited {
+      color: #288fdc; }
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #54a6e3; }
+
+/* Microformats */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.25em 0;
+  border: 1px solid #dddddd;
+  padding: 0.625em 0.75em; }
+  .vcard li {
+    margin: 0;
+    display: block; }
+  .vcard .fn {
+    font-weight: bold;
+    font-size: 0.9375em; }
+
+.vevent .summary {
+  font-weight: bold; }
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.0625em; }
+
+@media only screen and (min-width: 800px) {
+  h1, h2, h3, .override, h4, h5, h6 {
+    line-height: 1.4; }
+
+  h1 {
+    font-size: 2.75em; }
+
+  h2 {
+    font-size: 2em; }
+
+  h3, .override {
+    font-size: 1.6875em; }
+
+  h4 {
+    font-size: 1.4375em; } }

@@ -1,0 +1,315 @@
+html {
+	overflow-x:hidden;
+}
+body{
+	background-color: #000;
+	background: url(//facebook.exploreasheville.com/images/bg.jpg) top center repeat-x;
+	font-family:@body-font;
+	margin: 0px;
+	padding: 0px;
+	font-size: @base-font-size;
+	line-height:@base-line-height;
+	color:@body-font-color;
+}
+@media only screen and (max-width: 767px) {
+	html, body {
+		background:none !important;
+	}
+}
+
+
+/*----------------------------layout------------------------------*/
+
+header{
+	width:100%;
+	height:129px;
+	position:relative;
+	top:0;
+	background:url(//facebook.exploreasheville.com/images/header_bg.png) top center repeat-x;
+	margin-bottom:-11px;
+}
+header .row{
+	padding-top:15px;
+}
+a.home-logo{
+	display: block;
+	width: 333px;
+	height: 67px;
+	overflow: hidden;
+	background-image: url("//facebook.exploreasheville.com/images/sprite.png");
+	background-position: -10px -10px;
+	text-indent: -999999px;
+}
+
+/*----------------------------nav------------------------------*/
+
+.navigation ul{
+	position:absolute;
+	top:-15px;
+	right:0;
+	z-index:9999;
+}
+.navigation ul li{
+	height: 42px;
+	padding: 0;
+	display:inline-block;
+}
+.navigation ul li.small{
+	background: url(//facebook.exploreasheville.com/images/sprite.png) no-repeat top;
+	width: 94px;
+	background-position: -384px -0;	
+}
+.navigation ul li.medium{
+	background: url(//facebook.exploreasheville.com/images/sprite.png) no-repeat top;
+	width: 150px;
+	background-position: -512px -0;
+}
+.navigation ul li.large{
+	background: url(//facebook.exploreasheville.com/images/sprite.png) no-repeat top;
+	width: 150px;
+	background-position: -512px -0;
+}
+.navigation ul li a, .vguidetab, .newsletter{
+	display:block;
+	color: #FFFFFF !important;
+	text-transform: uppercase;
+	font-family:@header-font;
+	font-weight:700;
+	font-size: 14px;
+	line-height: 33px;
+	height:34px;
+	text-shadow: -1px -1px 1px rgba(0,0,0,.2);
+	text-align:center;
+}
+.navigation ul li a:hover, .vguidetab:hover, .newsletter:hover{
+	color: #eeeeee !important;
+	text-shadow: -1px -1px 1px rgba(0,0,0,.4);
+}
+
+/*----------------------------social-bar------------------------------*/
+
+header .social{
+	height:41px;
+	width:100%;
+	position:relative;
+	z-index:99999999;
+	top:6px;
+	background:url(//facebook.exploreasheville.com/images/social-toolbar.png) top center repeat-x;
+	overflow:visible;
+}
+header .social .row{
+	padding-top:0;
+}
+header .social .row ul{
+	list-style-type:none;
+	margin:0 auto;
+}
+header .social .row ul li{
+	list-style-type:none;
+	display:inline-block;
+	overflow:visible;
+	vertical-align:top;
+}
+.vguidetab, .newsletter {
+	width: 154px;
+	height: 51px;
+	background: url(//facebook.exploreasheville.com/images/sprite.png) top left no-repeat;
+	display:block;
+	background-position: -383px -64px;
+	font-size:17px;
+}
+.facebook-like-button{
+	width:90px;
+}
+.facebook-like-button div{
+	position:absolute;
+}
+.twitter{
+	margin-top:4px;
+	width:159px;
+}
+.pin-it{
+	width:50px;
+	margin-top:4px;
+    text-align:center;
+}
+.pin-it iframe, .pin-it img{
+	position:absolute;
+	top:4px;
+}
+.plus-one{
+	width:40px;
+}
+.plus-one div{
+	position:absolute;
+	top:4px;
+}
+.pin-img {
+	margin-bottom:10px;
+}
+.pin-img a, .pin-img img{
+	float:left !important;
+	clear:both !important;
+}
+@media (max-width: 900px) {
+    header .social .row ul li.twitter{
+		display:none;
+	}
+    .panel{
+        padding:5px !important;
+    }
+}
+@media (max-width: 800px) {
+    header{
+        height:110px;
+        border-bottom:10px solid @asheville-blue;
+    }
+	header > .row{
+		margin-bottom:-15px;
+	}
+    header .social .row ul li{
+		margin-top:-15px;
+	}
+    header .social .row ul li.social-button, .navigation ul{
+		display:none;
+	}
+	ul.side-nav li{
+		display:inline-block !important;
+	}
+	.navigation ul, .search, .social-button, .fb-comments, .hide-mobile{
+		display:none !important;
+	}
+
+}
+
+
+/*----------------------------wrapper/footer------------------------------*/
+
+.wrapper{
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0 auto;
+    border: solid 1px @border-color;
+    border-top:0px;
+    border-bottom:0px;
+    background-color:@background-color;
+    .box-shadow;
+    width: 100%;
+    max-width: 75em;
+    *zoom: 1;
+}
+.wrapper:before, .wrapper:after {
+	content: " ";
+	display: table;
+}
+.wrapper:after {
+	clear: both;
+}
+
+
+footer{
+	background-color:#d2d6bf;
+	border-top:10px solid @sv-red;
+	padding:40px 0;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0 15px 10px -10px rgba(0,0,0,.5);
+	   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0 15px 10px -10px rgba(0,0,0,.5);
+			box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0 15px 10px -10px rgba(0,0,0,.5);
+	-webkit-border-radius: 0 0 10px 10px;
+       -moz-border-radius: 0 0 10px 10px;
+			border-radius: 0 0 10px 10px;
+}
+
+a.home-logo-footer{
+	display: block;
+	width: 210px;
+	height: 47px;
+	overflow: hidden;
+	background-image: url("//facebook.exploreasheville.com/images/sprite.png");
+	background-position: 0px -90px;
+	text-indent: -999999px;
+}
+
+.post-outer{
+    margin-bottom:1em !important;
+}
+.post-body a img, .post-body img{
+    width:auto;
+    padding:0;
+}
+.date-outer:first-of-type .date-posts .post-outer:first-of-type .panel h2, .date-outer:first-of-type .date-posts .post-outer:first-of-type .panel h2 a{
+	font-size:1.6875em;
+    color:@asheville-blue;
+}
+.post-body{
+    font-family: inherit;
+    font-weight: normal;
+    font-size: @base-font-size;
+    line-height: @base-line-height;
+    margin-bottom: floor(@base-line-height / 2);
+    .antialiased;
+    color:@body-font-color;
+}
+.post-body br:first-of-type{
+    display:none;
+}
+.date-outer:first-of-type .date-posts .post-outer:first-of-type .panel .post-body{
+	font-size:@base-font-size;
+}
+.date-outer:first-of-type .date-posts .post-outer:first-of-type .panel a img, .date-outer:first-of-type .date-posts .post-outer:first-of-type .panel img{
+    position:relative;
+    float:right;
+}
+.date-outer:not(:first-of-type) .date-posts .post-outer .panel .post-body{
+    overflow:hidden;
+}
+.thumbnail{
+    padding:0;
+}
+.jump-link{
+    margin-top:0.625em;
+}
+/*----------------------------everything else------------------------------*/
+
+/* Blogger Thing */
+.section{
+    margin:0 !important;
+    padding:0 !important;
+}
+article .panel{
+    position:relative;
+    z-index:1;
+}
+.columns > img, .columns > a > img, .post-body a img, .post-body img, .date-outer:not(:first-of-type) div div div a img, .date-outer:not(:first-of-type) div div div img{
+    .panel;
+    padding:0 !important;
+}
+/* Blockquotes */
+blockquote {
+	margin: 1em 0;
+	padding: 1em;
+	border:none;
+	border-top: 2px solid @sv-red;
+	border-bottom: 2px solid @sv-red;
+}
+blockquote cite {
+	display: block;
+	font-size: 0.8125em;
+	color: @asheville-dark-grey;
+	font-style:italic;
+	text-align:right;
+}
+blockquote cite:before {
+	content: "\2014 \0020";
+}
+blockquote cite a, blockquote cite a:visited {
+	color: @asheville-red;
+}
+blockquote, blockquote p {
+	line-height: 1.6em;
+	color: @asheville-grey;
+	font-size:1em;
+}
+.post-body iframe{
+    .panel;
+    padding:0px;
+}
